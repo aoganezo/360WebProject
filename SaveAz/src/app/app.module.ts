@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {GalleryComponent} from './gallery/gallery.component';
 
 import { AppComponent } from './app.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
@@ -16,13 +17,14 @@ import { AlertsComponent } from './alerts/alerts.component';
     SearchbarComponent,
     DashboardComponent,
     ItemsLikedComponent,
+    GalleryComponent,
     AlertsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

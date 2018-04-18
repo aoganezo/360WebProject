@@ -1,0 +1,25 @@
+ul { 
+    padding: 0; 
+    width: 1000px;
+    margin: 20px auto
+    
+}
+li { 
+    display: inline-grid;
+    float: left;
+    margin: 5px
+}
+
+figure {
+    display: inline-grid;
+    text-align: center;
+    font-size: smaller;
+    border: thin silver solid;
+    padding: 1em;
+    margin: 0;
+    box-shadow: #555 1px 1px 8px 1px;
+  }
+
+  figcaption{
+      padding-top: .5em;
+  }
