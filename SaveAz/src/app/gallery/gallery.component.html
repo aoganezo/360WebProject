@@ -1,10 +1,9 @@
-<h2>{{title}}</h2>
-
+<!--<h2>{{title}}</h2>-->
 <div class="row">
     <ul id="thumbnailsList">
         <li *ngFor = "let image of visibleImages">
             <figure>
-                <img src="{{image.url}}" width = "200" height = "200" > 
+                <img src="{{image.url}}" width = "200" height = "200" >
                 <figcaption>{{image.caption}}</figcaption>
             </figure>
         </li>

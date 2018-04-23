@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  isCollapsed = true;
+  imgPath = '../assets/img/SaveAZ.jpg';
 }
-
-//this.fullImagePath = '../assets/img/SaveAZ.jpg';

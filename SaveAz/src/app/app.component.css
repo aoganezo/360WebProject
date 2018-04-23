@@ -1,0 +1,36 @@
+.appNav {
+  list-style-type: none;
+  margin-bottom: 4%;
+  padding: 0 0 0 1%;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+
+.appNav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.appNav a:hover {
+  background-color: #111;
+}
+
+.loginBtn {
+  float: left;
+}
+
+.brand {
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.logo {
+  width:75px;
+  height:75px;
+  margin:1% 0 0 1%;
+}

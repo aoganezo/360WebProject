@@ -1,10 +1,10 @@
-ul { 
-    padding: 0; 
+ul {
+    padding: 0;
     width: 1000px;
     margin: 20px auto
-    
+
 }
-li { 
+li {
     display: inline-grid;
     float: left;
     margin: 5px
@@ -22,4 +22,9 @@ figure {
 
   figcaption{
       padding-top: .5em;
+  }
+
+  #thumbnailsList {
+    margin-top: 6%;
+
   }
