@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemsLikedComponent } from './items-liked/items-liked.component';
 import { AlertsComponent } from './alerts/alerts.component';
+import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 
 
 @NgModule({
@@ -19,11 +20,12 @@ import { AlertsComponent } from './alerts/alerts.component';
     DashboardComponent,
     ItemsLikedComponent,
     GalleryComponent,
-    AlertsComponent
+    AlertsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]
