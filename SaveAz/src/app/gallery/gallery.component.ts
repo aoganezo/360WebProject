@@ -7,7 +7,7 @@ import { ImageService } from '../image/shared/image.service';
 })
 
 export class GalleryComponent{
-    title = 'Gallery'
+    title = 'Gallery';
     visibleImages: any[] = [];
 
     constructor(private imageService: ImageService){

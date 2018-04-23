@@ -9,3 +9,5 @@ export class AppComponent {
   title = 'app';
   isCollapsed = true;
 }
+
+//this.fullImagePath = '../assets/img/SaveAZ.jpg';
