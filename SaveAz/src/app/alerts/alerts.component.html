@@ -1,3 +1,11 @@
-<p>
-  alerts works!
-</p>
+<ul id="thumbnailsList">
+<li *ngFor = "let image of visibleImages">
+<div class="alert-details">
+            <figure>
+                <img src="{{image.url}}" width = "200" height = "200" >
+            </figure>
+			<p>{{image.caption}}</p>
+			<p>Alert details will go here!</p>
+</div>
+</li>
+</ul>
