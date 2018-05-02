@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemsLikedComponent } from './items-liked/items-liked.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+import { LikedItemServiceService } from './liked-item-service.service';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import {BsDropdownModule} from "ngx-bootstrap/dropdown";
     AppRoutingModule,
     BsDropdownModule.forRoot()
   ],
-  providers: [ImageService],
+  providers: [ImageService, LikedItemServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
