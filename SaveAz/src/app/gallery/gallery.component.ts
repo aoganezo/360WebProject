@@ -14,18 +14,18 @@ export class GalleryComponent{
     constructor(private imageService: ImageService, public itemService : LikedItemServiceService){
         this.visibleImages = this.imageService.getImages();
     }
-	
-	likeItem(image:[]){
-		this.itemService.addLikedItem(image);
-		button = document.getElementById("like");
-		button.innerHTML = "Unlike";
-		button.ng-click = "unlikeItem(image)";
-	}
-	
-	unlikeItem(image:[]){
-		this.itemService.removeLikedItem(image);
-		button = document.getElementById("like");
-		button.innerHTML = "Like";
-		button.ng-click = "likeItem(image)";
-	}
+
+	// likeItem(image:[]){
+	// 	this.itemService.addLikedItem(image);
+	// 	button = document.getElementById("like");
+	// 	button.innerHTML = "Unlike";
+	// 	button.ng-click = "unlikeItem(image)";
+	// }
+	//
+	// unlikeItem(image:[]){
+	// 	this.itemService.removeLikedItem(image);
+	// 	button = document.getElementById("like");
+	// 	button.innerHTML = "Like";
+	// 	button.ng-click = "likeItem(image)";
+	// }
 }
