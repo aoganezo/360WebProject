@@ -11,7 +11,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemsLikedComponent } from './items-liked/items-liked.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+import {ProfileComponent} from './profile/profile.component';
 
+import {AuthService} from './authService/auth.service';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,17 @@ import {BsDropdownModule} from "ngx-bootstrap/dropdown";
     ItemsLikedComponent,
     GalleryComponent,
     AlertsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BsDropdownModule.forRoot()
   ],
-  providers: [ImageService],
+  providers: [
+    ImageService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
