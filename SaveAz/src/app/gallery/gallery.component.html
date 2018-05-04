@@ -3,8 +3,10 @@
     <ul id="thumbnailsList">
         <li *ngFor = "let image of visibleImages">
             <figure>
-                <img src="{{image.url}}" width = "200" height = "200" >
+              <app-item-detail></app-item-detail>
+                <img src="{{image.url}}" width = "200" height = "200">
                 <figcaption>{{image.caption}}</figcaption>
+
             </figure>
         </li>
     </ul>
