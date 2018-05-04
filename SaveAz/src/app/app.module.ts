@@ -11,7 +11,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemsLikedComponent } from './items-liked/items-liked.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+<<<<<<< HEAD
 import {ProfileComponent} from './profile/profile.component';
+=======
+import { LikedItemServiceService } from './liked-item-service.service';
+>>>>>>> 366afdb044caeba3a5c7f0e5f26e1ae9746f3e04
 
 import {AuthService} from './authService/auth.service';
 
@@ -30,10 +34,14 @@ import {AuthService} from './authService/auth.service';
     AppRoutingModule,
     BsDropdownModule.forRoot()
   ],
+<<<<<<< HEAD
   providers: [
     ImageService,
     AuthService
   ],
+=======
+  providers: [ImageService, LikedItemServiceService],
+>>>>>>> 366afdb044caeba3a5c7f0e5f26e1ae9746f3e04
   bootstrap: [AppComponent]
 })
 export class AppModule { }

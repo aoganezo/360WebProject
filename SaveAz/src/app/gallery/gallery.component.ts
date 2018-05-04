@@ -1,5 +1,6 @@
 import { Component, OnChanges } from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
+import { LikedItemServiceService } from '../liked-item-service.service';
 @Component({
     selector: 'app-gallery',
     templateUrl: './gallery.component.html',
@@ -10,7 +11,21 @@ export class GalleryComponent{
     title = 'Gallery';
     visibleImages: any[] = [];
 
-    constructor(private imageService: ImageService){
+    constructor(private imageService: ImageService, public itemService : LikedItemServiceService){
         this.visibleImages = this.imageService.getImages();
     }
+	
+	likeItem(image:[]){
+		this.itemService.addLikedItem(image);
+		button = document.getElementById("like");
+		button.innerHTML = "Unlike";
+		button.ng-click = "unlikeItem(image)";
+	}
+	
+	unlikeItem(image:[]){
+		this.itemService.removeLikedItem(image);
+		button = document.getElementById("like");
+		button.innerHTML = "Like";
+		button.ng-click = "likeItem(image)";
+	}
 }
