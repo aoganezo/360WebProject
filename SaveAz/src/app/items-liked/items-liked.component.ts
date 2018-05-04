@@ -11,10 +11,10 @@ export class ItemsLikedComponent implements OnInit {
 	likedItems = []
 
   constructor(public itemService : LikedItemServiceService) { }
-
+  
   ngOnInit() {
-	  this.itemService.getLikedItems()
-	  .subscribe(likedItems => this.likedItems = likedItems);
+	  //this.itemService.getLikedItems()
+	  //.subscribe(likedItems => this.likedItems = likedItems);
   }
 
 }

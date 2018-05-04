@@ -37,9 +37,10 @@ import {AuthService} from './authService/auth.service';
   ],
   providers: [
     ImageService,
-    AuthService
+    AuthService,
+    LikedItemServiceService
   ],
-  providers: [ImageService, LikedItemServiceService],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
