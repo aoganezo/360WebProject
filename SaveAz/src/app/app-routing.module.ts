@@ -9,12 +9,12 @@ const routes:Routes = [
 	{ path: 'dashboard', component: DashboardComponent },
 	{ path: 'items-liked', component: ItemsLikedComponent },
 	{ path: 'alerts', component: AlertsComponent }
-	]
-	
+	];
+
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {
-	
+
 }

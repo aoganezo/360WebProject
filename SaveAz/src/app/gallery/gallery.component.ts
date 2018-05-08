@@ -1,6 +1,7 @@
 import { Component, OnChanges } from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
 import { LikedItemServiceService } from '../liked-item-service.service';
+import {Router} from '@angular/router';
 @Component({
     selector: 'app-gallery',
     templateUrl: './gallery.component.html',
@@ -13,6 +14,10 @@ export class GalleryComponent{
 
     constructor(private imageService: ImageService, public itemService : LikedItemServiceService){
         this.visibleImages = this.imageService.getImages();
+    }
+
+    openItemDetail(_router:Router) {
+     // this._router.navigate(["../Dashboard"]);
     }
 
 	// likeItem(image:[]){
