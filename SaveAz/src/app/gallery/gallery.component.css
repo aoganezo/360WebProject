@@ -1,12 +1,10 @@
 ul {
     padding: 0;
-    width: 1000px;
-    margin: 20px auto
-
+    width: 1200px;
+    margin: 20px auto;
 }
 li {
-    display: inline-grid;
-    float: left;
+    display: inline-block;
     margin: 5px
 }
 
@@ -27,4 +25,10 @@ figure {
   #thumbnailsList {
     margin-top: 6%;
 
+  }
+
+  button {
+      height:20px;
+      width:100px;
+      text-align: center;
   }
