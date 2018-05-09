@@ -3,15 +3,23 @@ import {Component, OnInit} from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
+
 @Component({
   selector: 'app-item-detail',
   templateUrl: './item-detail.component.html',
   styleUrls: ['./item-detail.component.css']
 })
+
+
+
 export class ItemDetailComponent implements OnInit {
   closeResult: string;
+  visibleImages: any[] = [];
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private imageService: ImageService) {
+    this.visibleImages = this.imageService.getImages();
+  }
+
 
   ngOnInit() { }
 

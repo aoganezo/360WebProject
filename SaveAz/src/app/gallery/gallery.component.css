@@ -1,7 +1,7 @@
 ul {
     padding: 0;
-    width: 1200px;
-    margin: 20px auto;
+    width: 1016px;
+    margin: auto;
 }
 li {
     display: inline-block;
@@ -13,13 +13,13 @@ figure {
     text-align: center;
     font-size: smaller;
     border: thin silver solid;
-    padding: 1em;
+    padding: 0.5em;
     margin: 0;
     box-shadow: #555 1px 1px 8px 1px;
   }
 
   figcaption{
-      padding-top: .5em;
+      padding-top: .25em;
   }
 
   #thumbnailsList {
