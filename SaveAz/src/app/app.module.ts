@@ -12,7 +12,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemsLikedComponent } from './items-liked/items-liked.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
-import { ItemDetailComponent } from './item-detail/item-detail.component';
 import {ProfileComponent} from './profile/profile.component';
 import { LikedItemServiceService } from './liked-item-service.service';
 
@@ -26,7 +25,6 @@ import {AuthService} from './authService/auth.service';
     ItemsLikedComponent,
     GalleryComponent,
     AlertsComponent,
-    ItemDetailComponent,
     ProfileComponent
   ],
   imports: [

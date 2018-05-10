@@ -1,8 +1,9 @@
 ul {
-    padding: 0;
-    width: 1016px;
+    width: 1046px;
+    text-align: center;
     margin: auto;
 }
+
 li {
     display: inline-block;
     margin: 5px
@@ -23,12 +24,16 @@ figure {
   }
 
   #thumbnailsList {
-    margin-top: 6%;
-
+      margin-top: 1%;
   }
 
   button {
       height:20px;
       width:100px;
       text-align: center;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
   }
