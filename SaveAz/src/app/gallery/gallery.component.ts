@@ -12,11 +12,11 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 export class GalleryComponent implements OnInit{
     title = 'Gallery';
-    visibleImages: any[] = [];
+	visibleImages: any[] = [];
 
     constructor(private imageService: ImageService, public itemService : LikedItemServiceService, private modalService: NgbModal){
         this.visibleImages = this.imageService.getImages();
-    }
+	}
 
 	ngOnInit() { }
 

@@ -6,34 +6,48 @@ ul {
 
 li {
     display: inline-block;
-    margin: 5px
+    margin: 5px;
+    margin-bottom: 10px;
 }
 
-figure {
-    display: inline-grid;
-    text-align: center;
-    font-size: smaller;
-    border: thin silver solid;
-    padding: 0.5em;
+.imageCaption {
+    display: inline-block;
+    padding: 3px;
     margin: 0;
-    box-shadow: #555 1px 1px 8px 1px;
-  }
+    border: thin silver solid;
+    box-shadow: #555 1px 1px 8px 1px;  
+    max-height: 315px;
+    min-height: 315px;
+}
+figure {
+    display: inline-table;
+    margin: 0px;
+}
 
-  figcaption{
-      padding-top: .25em;
-  }
+figure img {
+    display: block;
+}
 
-  #thumbnailsList {
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: left;
+    font-size: smaller;
+    font-weight: 800;
+    padding: 15px;
+}
+
+#thumbnailsList {
       margin-top: 1%;
-  }
+}
 
-  button {
+button {
       height:20px;
       width:100px;
       text-align: center;
-  }
+}
 
-  * {
+* {
     margin: 0;
     padding: 0;
-  }
+}
