@@ -14,6 +14,8 @@ import { AlertsComponent } from './alerts/alerts.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 import {ProfileComponent} from './profile/profile.component';
 import { LikedItemServiceService } from './liked-item-service.service';
+import { HttpModule, Http } from '@angular/http';
+//import { SearchService } from './search-service.service';
 
 import {AuthService} from './authService/auth.service';
 
@@ -31,14 +33,18 @@ import {AuthService} from './authService/auth.service';
     BrowserModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpModule,
   ],
   providers: [
+    Http,
     ImageService,
     AuthService,
-    LikedItemServiceService
+    LikedItemServiceService,
   ],
-  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
