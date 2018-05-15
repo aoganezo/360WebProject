@@ -6,23 +6,23 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class LikedItemServiceService {
 
-	likedItems = [];
+  likedItems = [];
 
   constructor() { }
 
-  // getLikedItems(): Observable<[]>{
-	//   return of(likedItems);
-  // }
-  //
-  // addLikedItem(image:[]):void{
-	//   likedItems.push(image);
-  // }
-  //
-  // RemoveLikedItem(image:[]):void{
-	//   int index = indexOf(image);
-	//   if(index > -1){
-	// 	likedItems.splice(index);
-	//   }
-  // }
+   getLikedItems(): Observable<Object[]>{
+     return of(this.likedItems);
+   }
+
+  addLikedItem(image:Object[]):void{
+	  this.likedItems.push(image);
+   }
+
+  removeLikedItem(image:Object[]):void{
+    let index = this.likedItems.indexOf(image);
+	   if(index > -1){
+	 	this.likedItems.splice(index);
+	  }
+   }
 
 }

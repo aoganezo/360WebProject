@@ -32,17 +32,21 @@ export class GalleryComponent implements OnInit{
      // this._router.navigate(["../Dashboard"]);
     }
 
-	// likeItem(image:[]){
-	// 	this.itemService.addLikedItem(image);
-	// 	button = document.getElementById("like");
-	// 	button.innerHTML = "Unlike";
-	// 	button.ng-click = "unlikeItem(image)";
-	// }
+	 likeItem(image:Object[]){
+	 	this.itemService.addLikedItem(image);
+	 	var likeButton = document.getElementById("like");
+	 	var unlikeButton = document.getElementById("unlike");
+		likeButton.style.display = "none";
+		unlikeButton.style.display = "inline";
+	 	//button.ng-click = "unlikeItem(image)";
+	 }
 	//
-	// unlikeItem(image:[]){
-	// 	this.itemService.removeLikedItem(image);
-	// 	button = document.getElementById("like");
-	// 	button.innerHTML = "Like";
-	// 	button.ng-click = "likeItem(image)";
-	// }
+	 unlikeItem(image:Object[]){
+	 	this.itemService.removeLikedItem(image);
+     var likeButton = document.getElementById("like");
+     var unlikeButton = document.getElementById("unlike");
+     likeButton.style.display = "inline";
+     unlikeButton.style.display = "none";
+	 	//button.ng-click = "likeItem(image)";
+	 }
 }

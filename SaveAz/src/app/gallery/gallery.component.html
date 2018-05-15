@@ -5,13 +5,15 @@
         <li *ngFor = "let image of visibleImages">
           <div class="imageCaption">
             <figure>
+              <button id ="like" ng-click="likeItem(image)" style="display: inline">Like</button>
+              <button id ="unlike" ng-click="unlikeItem(image)" style="display: none" >Liked!</button>
                   <a class="btn" (click)="open(content)">
                     <img class="urlImage" src={{image.url}} width = "200" height = "200">
                   </a>
                   <figcaption>{{image.caption}}</figcaption>
             </figure>
           </div>
-          
+
 
             <ng-template #content let-c="close" let-d="dismiss">
               <div class="modal-header">
