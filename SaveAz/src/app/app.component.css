@@ -12,7 +12,7 @@
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 12px;
   text-decoration: none;
 }
 
@@ -38,5 +38,5 @@
 .right{
   text-align: right;
   float: right;
-  padding-right: 20px;
 }
+
