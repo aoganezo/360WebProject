@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7fb1d3f1-5e1f-4048-8a52-201fa34e9c88" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveAz/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveAz/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveAz/src/app/items-liked/items-liked.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/src/app/items-liked/items-liked.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveAz/src/app/liked-item-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/src/app/liked-item-service.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/SaveAz/src/app/liked-item-service.service.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/SaveAz/src/app/items-liked/items-liked.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -44,23 +44,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gallery.component.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gallery.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+            <state relative-caret-position="189">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gallery.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gallery.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+            <state relative-caret-position="136">
+              <caret line="8" column="58" lean-forward="true" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="70" />
               <folding>
-                <element signature="n#style#0;n#button#0;n#figure#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#figure#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#figure#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#figure#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="e#943#950#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,9 +118,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="203" />
+    <option name="x" value="101" />
     <option name="y" value="22" />
-    <option name="width" value="1475" />
+    <option name="width" value="1578" />
     <option name="height" value="973" />
   </component>
   <component name="ProjectView">
@@ -238,25 +239,26 @@
       <updated>1524430919492</updated>
       <workItem from="1524430921453" duration="27458000" />
       <workItem from="1525285631245" duration="9373000" />
-      <workItem from="1526402439680" duration="7210000" />
+      <workItem from="1526402439680" duration="10505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44041000" />
+    <option name="totallyTimeSpent" value="47336000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="163" y="18" width="1180" height="778" extended-state="0" />
+    <frame x="81" y="18" width="1262" height="778" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="6" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26157805" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24439102" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50343055" side_tool="true" visible="true" weight="0.1676923" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5032051" side_tool="true" visible="true" weight="0.1676923" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="5" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.49656945" visible="true" weight="0.1676923" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.49679488" visible="true" weight="0.1676923" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -469,7 +471,7 @@
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/liked-item-service.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -479,28 +481,29 @@
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/items-liked/items-liked.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts">
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+        <state relative-caret-position="136">
+          <caret line="8" column="58" lean-forward="true" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#figure#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#figure#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="e#943#950#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html">
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#figure#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#figure#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
         </state>
       </provider>
     </entry>
