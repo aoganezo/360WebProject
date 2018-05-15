@@ -14,7 +14,7 @@ import { AlertsComponent } from './alerts/alerts.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 import {ProfileComponent} from './profile/profile.component';
 import { LikedItemServiceService } from './liked-item-service.service';
-import { HttpModule, Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
 //import { SearchService } from './search-service.service';
 
 import {AuthService} from './authService/auth.service';
@@ -37,7 +37,7 @@ import {AuthService} from './authService/auth.service';
     HttpModule,
   ],
   providers: [
-    Http,
+    HttpModule,
     ImageService,
     AuthService,
     LikedItemServiceService,
