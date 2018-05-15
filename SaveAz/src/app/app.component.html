@@ -7,16 +7,21 @@
   <a routerLink="/items-liked">Items Liked</a>
   <a routerLink="/alerts">Alerts</a>
   <div class="right">
-    <a routerLink="/link"
+    <a routerLink="/items-liked"
       class="btn btn-primary btn-margin"
+      *ngIf="!auth.isAuthenticated()"
       (click)="auth.login()">
         Log In
+    </a>
+    <a routerLink="/dashboard"
+      class="btn btn-primary btn-margin"
+      *ngIf="auth.isAuthenticated()"
+      (click)="auth.logout()">
+        Log Out
     </a>
   </div>
   
 </nav>
 <router-outlet></router-outlet>
-<app-searchbar></app-searchbar>
-<app-gallery></app-gallery>
 
 

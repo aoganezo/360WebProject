@@ -11,7 +11,7 @@ export class AuthService {
     domain: 'saveaz.auth0.com',
     responseType: 'token id_token',
     audience: 'https://saveaz.auth0.com/userinfo',
-    redirectUri: 'http://localhost:4200/',
+    redirectUri: 'http://localhost:4200/items-liked',
     scope: 'openid'
   });
 
