@@ -23,7 +23,7 @@ const ImagesArray = [
     {"id": 6, "category": "testCategory", "caption": "This is a test caption 6", "url": "assets/img/product.png"},
     {"id": 7, "category": "testCategory", "caption": "This is a test caption 7", "url": "assets/img/product.png"},
     {"id": 8, "category": "testCategory", "caption": "This is a test caption 8", "url": "assets/img/product.png"},
-    {"id": 9, "category": "testCategory", "caption": "This is a test caption 9 and i want to see what this does buta apeo iawpdlf kq;wealifj", "url": "assets/img/product.png"},
+    {"id": 9, "category": "testCategory", "caption": "This is a test caption 9 and i want to see what this does buta apeoiawpdlfkq;wealifj", "url": "assets/img/product.png"},
     {"id": 10, "category": "testCategory", "caption": "This is a test caption 10", "url": "assets/img/product.png"},
     {"id": 11, "category": "testCategory", "caption": "This is a test caption 11", "url": "assets/img/product.png"},
     {"id": 12, "category": "testCategory", "caption": "This is a test caption 12", "url": "assets/img/product.png"},
