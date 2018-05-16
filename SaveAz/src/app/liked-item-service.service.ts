@@ -16,12 +16,14 @@ export class LikedItemServiceService {
 
   addLikedItem(image:Object[]):void{
 	  this.likedItems.push(image);
+    console.log(this.likedItems);
    }
 
   removeLikedItem(image:Object[]):void{
     let index = this.likedItems.indexOf(image);
 	   if(index > -1){
 	 	this.likedItems.splice(index);
+       console.log(this.likedItems);
 	  }
    }
 
