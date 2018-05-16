@@ -15,9 +15,10 @@ li {
     padding: 3px;
     margin: 0;
     border: thin silver solid;
-    box-shadow: #555 1px 1px 8px 1px;  
+    box-shadow: #555 1px 1px 8px 1px;
     max-height: 315px;
     min-height: 315px;
+    overflow: hidden;
 }
 figure {
     display: inline-table;
@@ -42,9 +43,13 @@ figcaption {
 }
 
 button {
-      height:20px;
-      width:100px;
-      text-align: center;
+    background-size: 100%; 
+    background-color: transparent;
+    border: 0;
+    height:35px;
+    width:35px;
+    text-align: center;
+    position: absolute;
 }
 
 * {

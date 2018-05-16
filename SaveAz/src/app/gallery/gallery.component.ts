@@ -32,19 +32,25 @@ export class GalleryComponent implements OnInit{
      // this._router.navigate(["../Dashboard"]);
     }
 
-	 likeItem($event,image:Object[]){
+	 likeItem(id,image:Object[]){
+      let likeId = "like".concat(id);
+      let unlikeId = "unlike".concat(id);
 	 	this.itemService.addLikedItem(image);
-		$event.target.class = "unlike";
-		$event.target.innerHTML = "Liked!";
-		$event.target.click = this.unlikeItem($event,image);
+	 	let likeButton = document.getElementById(likeId);
+     let unlikeButton = document.getElementById(unlikeId);
+     likeButton.style.display = "none";
+     unlikeButton.style.display = "inline";
 	 	//button.ng-click = "unlikeItem(image)";
 	 }
 	//
-	 unlikeItem($event,image:Object[]){
+	 unlikeItem(id,image:Object[]){
+     let likeId = "like".concat(id);
+     let unlikeId = "unlike".concat(id);
 	 	this.itemService.removeLikedItem(image);
-     $event.target.class = "like";
-     $event.target.innerHTML = "Like";
-     $event.target.click = this.likeItem($event,image);
+     let likeButton = document.getElementById(likeId);
+     let unlikeButton = document.getElementById(unlikeId);
+     likeButton.style.display = "inline";
+     unlikeButton.style.display = "none";
 	 	//button.ng-click = "likeItem(image)";
 	 }
 }

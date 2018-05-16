@@ -8,7 +8,7 @@ import { LikedItemServiceService } from '../liked-item-service.service';
 })
 export class ItemsLikedComponent implements OnInit {
 
-	likedItems = []
+	likedItems = [];
 
   constructor(public itemService : LikedItemServiceService) { }
 

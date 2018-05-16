@@ -5,8 +5,8 @@
         <li *ngFor = "let image of visibleImages">
           <div class="imageCaption">
             <figure>
-              <button class ="like" (click)="likeItem($event,image)" style="display: inline">Like</button>
-              <button class ="unlike" (click)="unlikeItem($event,image)" style="display: none" >Liked!</button>
+              <button id = "like{{image.id}}" class ="like" (click)="likeItem(image.id,image)" style="display: inline; background-image: url('../../assets/img/blankcircle.png')"></button>
+              <button id = "unlike{{image.id}}" class ="unlike" (click)="unlikeItem(image.id,image)" style="display: none; background-image: url('../../assets/img/checkmark.png')"></button>
                   <a class="btn" (click)="open(content)">
                     <img class="urlImage" src={{image.url}} width = "200" height = "200">
                   </a>
