@@ -22,7 +22,7 @@ export class ImageService {
     //       tap(heroes => this.log(`fetched heroes`)),
     //       catchError(this.handleError('getHeroes', []))
     //     );
-    // }
+     }
 
     // getImageFile(id: number) {
     //     return ImagesArray.slice(0).find(image => image.id === id);
@@ -44,7 +44,6 @@ export class ImageService {
           // 'caption' : res.items[0].shortDescription
           };
         console.log(ImagesArray);
-        GalleryComponent.ngOnInit();
       });
 
 

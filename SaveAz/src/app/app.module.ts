@@ -20,7 +20,15 @@ import { HttpModule } from '@angular/http';
 // import { SearchService } from './search-service.service';
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import {AuthService} from './authService/auth.service';
+<<<<<<< HEAD
 import {HttpClientModule} from '@angular/common/http';
+=======
+import {HttpClient} from '@angular/common/http';
+import { DatabaseService } from './database.service';
+import {AngularFireModule} from 'angularfire2';
+import { environment } from '../environments/environment';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
 
 @NgModule({
   declarations: [
@@ -37,13 +45,25 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     NgbModule.forRoot(),
+<<<<<<< HEAD
     HttpClientModule,
+=======
+    HttpModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
   ],
   providers: [
     HttpModule,
     ImageService,
     AuthService,
+<<<<<<< HEAD
     LikedItemServiceService
+=======
+    LikedItemServiceService,
+    HttpClient,
+    DatabaseService
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
   ],
 
   bootstrap: [AppComponent]
