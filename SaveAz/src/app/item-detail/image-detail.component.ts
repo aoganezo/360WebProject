@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { ImageService } from './shared/image.service';
 
-
-@Component({ 
+@Component({
     selector: 'app-image-detail',
     templateUrl: './image-detail.component.html',
     styleUrls: ['./image-detail.component.css']
