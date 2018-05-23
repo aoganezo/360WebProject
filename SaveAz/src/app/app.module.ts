@@ -21,6 +21,10 @@ import { HttpModule } from '@angular/http';
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import {AuthService} from './authService/auth.service';
 import {HttpClient} from '@angular/common/http';
+import { DatabaseService } from './database.service';
+import {AngularFireModule} from 'angularfire2';
+import { environment } from '../environments/environment';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
 
 @NgModule({
   declarations: [
@@ -38,13 +42,16 @@ import {HttpClient} from '@angular/common/http';
     BsDropdownModule.forRoot(),
     NgbModule.forRoot(),
     HttpModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
   ],
   providers: [
     HttpModule,
     ImageService,
     AuthService,
     LikedItemServiceService,
-    HttpClient
+    HttpClient,
+    DatabaseService
   ],
 
   bootstrap: [AppComponent]
