@@ -24,7 +24,7 @@ export class ImageService {
       // for (let i = 0; i < 10; i++) { //fix
       //
       // }
-      //ImagesArray.
+      // ImagesArray.
     }
 }
 
