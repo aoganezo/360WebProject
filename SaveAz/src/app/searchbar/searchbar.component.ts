@@ -23,10 +23,11 @@ export class SearchbarComponent {
 
   search() {
     this.searchSubject = (<HTMLInputElement>document.getElementById('searchSubject')).value;
-    const url = this.apiRoot + this.searchSubject;
+    let url = this.apiRoot + this.searchSubject;
     if (this.searchSubject !== '') {
       console.log('subject: ' + this.searchSubject);
       this.is.searchIS(url);
+
 
     }
   }

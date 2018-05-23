@@ -20,7 +20,7 @@ import { HttpModule } from '@angular/http';
 // import { SearchService } from './search-service.service';
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import {AuthService} from './authService/auth.service';
-import {HttpClient} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,14 +37,13 @@ import {HttpClient} from '@angular/common/http';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     NgbModule.forRoot(),
-    HttpModule,
+    HttpClientModule,
   ],
   providers: [
     HttpModule,
     ImageService,
     AuthService,
-    LikedItemServiceService,
-    HttpClient
+    LikedItemServiceService
   ],
 
   bootstrap: [AppComponent]

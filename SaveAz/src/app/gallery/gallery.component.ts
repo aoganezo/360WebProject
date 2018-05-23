@@ -10,21 +10,27 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
     styleUrls: ['./gallery.component.css']
 })
 
-export class GalleryComponent implements OnInit{
-    title = 'Gallery';
-	visibleImages: any[] = [];
+export class GalleryComponent implements OnInit {
+  title = 'Gallery';
+  visibleImages: Item[];
 
-    constructor(private imageService: ImageService, public itemService : LikedItemServiceService, private modalService: NgbModal){
-        this.visibleImages = this.imageService.getImages();
-	}
+  constructor(private imageService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {}
 
-	ngOnInit() { }
+  ngOnInit() {
+      this.getItems();
+      console.log('test ngOnInit');
+  }
 
-	open(content) {
-		this.modalService.open(content).result.then((result) => {
-		  //this.closeResult = `Closed with: ${result}`;
+  getItems() {
+    console.log('test');
+    this.imageService.getImages().subscribe(visibleImages => this.visibleImages = visibleImages);
+  }
+
+  open(content) {
+    this.modalService.open(content).result.then((result) => {
+		  // this.closeResult = `Closed with: ${result}`;
 		}, (reason) => {
-		  //this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+		  // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
 		});
 	  }
 
@@ -32,7 +38,7 @@ export class GalleryComponent implements OnInit{
      // this._router.navigate(["../Dashboard"]);
     }
 
-	 likeItem(id,image:Object[]){
+	 likeItem(id,image:Object[]) {
       let likeId = "like".concat(id);
       let unlikeId = "unlike".concat(id);
 	 	this.itemService.addLikedItem(image);
