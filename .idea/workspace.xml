@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5faaa9a9-ee0e-40ca-8479-22ff1e8e8c84" name="Default" comment="">
+<<<<<<< HEAD
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SaveAz/src/app/Item.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveAz/src/app/app.module.ts" afterPath="$PROJECT_DIR$/SaveAz/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts" afterPath="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveAz/src/app/image/shared/image.service.ts" afterPath="$PROJECT_DIR$/SaveAz/src/app/image/shared/image.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveAz/src/app/profile/profile.component.ts" afterPath="$PROJECT_DIR$/SaveAz/src/app/profile/profile.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveAz/src/app/searchbar/searchbar.component.ts" afterPath="$PROJECT_DIR$/SaveAz/src/app/searchbar/searchbar.component.ts" />
+=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaveAz/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaveAz/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/package.json" afterDir="false" />
@@ -9,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaveAz/src/app/image/shared/image.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/src/app/image/shared/image.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaveAz/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaveAz/src/environments/environment.ts" afterDir="false" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,10 +35,37 @@
       <file leaf-file-name="database.service.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SaveAz/src/app/database.service.ts">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchbar.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SaveAz/src/app/searchbar/searchbar.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="60" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gallery.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+=======
             <state relative-caret-position="153">
               <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
               </folding>
             </state>
           </provider>
@@ -37,35 +74,83 @@
       <file leaf-file-name="environment.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SaveAz/src/environments/environment.ts">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="224">
+              <caret line="24" column="8" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="24" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#196#259#0" expanded="true" />
+=======
             <state relative-caret-position="204">
               <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tslint.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SaveAz/tslint.json">
+      <file leaf-file-name="gallery.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="60">
+              <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+              <folding />
+            </state>
+=======
             <state relative-caret-position="-1071" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SaveAz/src/app/app.module.ts">
+      <file leaf-file-name="Item.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SaveAz/src/app/Item.ts">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+=======
             <state relative-caret-position="378">
               <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
               <folding>
                 <element signature="e#1172#1227#0" expanded="true" />
               </folding>
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="image-detail.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SaveAz/src/app/image/image-detail.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+=======
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>like</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,9 +158,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SaveAz/src/app/searchbar/searchbar.component.ts" />
-        <option value="$PROJECT_DIR$/SaveAz/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/SaveAz/src/app/image/image-detail.component.ts" />
+        <option value="$PROJECT_DIR$/SaveAz/src/app/app.component.ts" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/SaveAz/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/SaveAz/src/app/profile/profile.component.ts" />
+        <option value="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html" />
+        <option value="$PROJECT_DIR$/SaveAz/src/app/item.ts" />
+        <option value="$PROJECT_DIR$/SaveAz/src/app/searchbar/searchbar.component.ts" />
+        <option value="$PROJECT_DIR$/SaveAz/src/app/Item.ts" />
+=======
+        <option value="$PROJECT_DIR$/SaveAz/src/app/image/image-detail.component.ts" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
         <option value="$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts" />
         <option value="$PROJECT_DIR$/SaveAz/src/app/image/shared/image.service.ts" />
         <option value="$PROJECT_DIR$/SaveAz/src/environments/environment.ts" />
@@ -93,6 +187,13 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/SaveAz/node_modules" />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds">
+    <option name="x" value="613" />
+    <option name="y" value="23" />
+    <option name="width" value="1067" />
+    <option name="height" value="972" />
+=======
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/SaveAz/package.json" />
@@ -103,6 +204,7 @@
     <option name="y" value="22" />
     <option name="width" value="1110" />
     <option name="height" value="973" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -150,6 +252,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="image" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
             </path>
             <path>
               <item name="360WebProject" type="b2602c69:ProjectViewProjectNode" />
@@ -158,6 +262,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="items-liked" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
             </path>
             <path>
               <item name="360WebProject" type="b2602c69:ProjectViewProjectNode" />
@@ -165,7 +270,8 @@
               <item name="SaveAz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="searchbar" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="360WebProject" type="b2602c69:ProjectViewProjectNode" />
@@ -221,12 +327,41 @@
       <updated>1524430919492</updated>
       <workItem from="1524430921453" duration="27458000" />
       <workItem from="1525285631245" duration="22666000" />
+<<<<<<< HEAD
+      <workItem from="1526433876520" duration="15240000" />
+=======
       <workItem from="1526433876520" duration="4932000" />
       <workItem from="1527032241834" duration="4533000" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="66863000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="613" y="23" width="1067" height="972" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.079349905" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31555554" sideWeight="0.50251615" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35803878" sideWeight="0.49748382" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
     <option name="totallyTimeSpent" value="61088000" />
   </component>
   <component name="ToolWindowManager">
@@ -251,6 +386,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="3" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -280,10 +416,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/items-liked/items-liked.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -292,6 +430,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/item-detail/item-detail.component.css" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -302,7 +441,14 @@
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
+<<<<<<< HEAD
+          <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+=======
           <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
         </state>
       </provider>
     </entry>
@@ -318,7 +464,12 @@
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
+<<<<<<< HEAD
+          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
+=======
           <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
         </state>
       </provider>
     </entry>
@@ -342,10 +493,15 @@
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/searchbar/searchbar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
+<<<<<<< HEAD
+          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding />
+=======
           <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
         </state>
       </provider>
     </entry>
@@ -378,7 +534,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/app-routing.module.ts">
+<<<<<<< HEAD
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+=======
       <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
     </entry>
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/item-detail/item-detail.component.html" />
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html">
@@ -457,7 +624,14 @@
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
+<<<<<<< HEAD
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="false" />
+          </folding>
+=======
           <caret line="18" selection-start-line="18" selection-end-line="18" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
         </state>
       </provider>
     </entry>
@@ -532,6 +706,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="55" lean-forward="false" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+=======
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/image/image-detail.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -539,12 +719,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/SaveAz/tslint.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1722">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#1172#1227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/profile/profile.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+=======
     <entry file="file://$PROJECT_DIR$/SaveAz/src/app/items-liked/items-liked.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -556,11 +763,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/app.component.ts">
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/image/image-detail.component.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/profile/profile.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/image/image-detail.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/Item.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+=======
         <state relative-caret-position="153">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
@@ -570,6 +807,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
         </state>
       </provider>
     </entry>
@@ -580,6 +818,46 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/searchbar/searchbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/searchbar/searchbar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="60" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/gallery/gallery.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveAz/src/app/image/shared/image.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="24" column="8" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="24" selection-end-column="8" />
+=======
     <entry file="file://$PROJECT_DIR$/SaveAz/tslint.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1071" />
@@ -609,8 +887,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+>>>>>>> 9fc1d90b782d6378afab44aa74f17340d17f938f
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#196#259#0" expanded="true" />
           </folding>
         </state>
       </provider>

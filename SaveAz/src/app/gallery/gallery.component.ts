@@ -1,7 +1,6 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
 import { LikedItemServiceService } from '../liked-item-service.service';
-import {Router} from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -10,40 +9,46 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
     styleUrls: ['./gallery.component.css']
 })
 
-export class GalleryComponent implements OnInit{
-    title = 'Gallery';
-    visibleImages: any[] = [];
+export class GalleryComponent implements OnInit {
+  title = 'Gallery';
+  visibleImages: Item[];
 
-    constructor(private imageService: ImageService, public itemService : LikedItemServiceService, private modalService: NgbModal){
-        this.visibleImages = this.imageService.getImages();
-    }
+  constructor(private imageService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {}
 
-    ngOnInit() { }
+  ngOnInit() {
+      this.getItems();
+  }
 
-    open(content) {
-      this.modalService.open(content).result.then((result) => {
-        // this.closeResult = `Closed with: ${result}`;
-      }, (reason) => {
-        // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-      });
-    }
+  getItems() {
+    console.log('test getItems()');
+    this.imageService.getImages().subscribe(visibleImages => this.visibleImages = visibleImages);
+  }
 
-    likeItem(id,image:Object[]){
-      let likeId = 'like'.concat(id);
-      let unlikeId = 'unlike'.concat(id);
+  open(content) {
+    this.modalService.open(content).result.then((result) => { });
+    // this.closeResult = `Closed with: ${result}`;
+    // }, (reason) => {
+    // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+  // });
+  }
+
+  likeItem(id, image: Object[]) {
+      const likeId = 'like'.concat(id);
+      const unlikeId = 'unlike'.concat(id);
       this.itemService.addLikedItem(image);
-      let likeButton = document.getElementById(likeId);
-      let unlikeButton = document.getElementById(unlikeId);
+      const likeButton = document.getElementById(likeId);
+      const unlikeButton = document.getElementById(unlikeId);
       likeButton.style.display = 'none';
       unlikeButton.style.display = 'inline';
      // button.ng-click = "unlikeItem(image)";
-     }
-  unlikeItem(id,image:Object[]){
-     let likeId = 'like'.concat(id);
-     let unlikeId = 'unlike'.concat(id);
-     this.itemService.removeLikedItem(image);
-     let likeButton = document.getElementById(likeId);
-     let unlikeButton = document.getElementById(unlikeId);
+  }
+
+  unlikeItem(id, image: Object[]) {
+    const likeId = 'like'.concat(id);
+    const unlikeId = 'unlike'.concat(id);
+    this.itemService.removeLikedItem(image);
+    const likeButton = document.getElementById(likeId);
+    const unlikeButton = document.getElementById(unlikeId);
      likeButton.style.display = 'inline';
      unlikeButton.style.display = 'none';
     }

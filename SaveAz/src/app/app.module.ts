@@ -15,11 +15,9 @@ import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {ProfileComponent} from './profile/profile.component';
 import { LikedItemServiceService } from './liked-item-service.service';
 import { HttpModule } from '@angular/http';
-// import { HttpClient, HttpHeaders } from '@angular/common/http';
-// import { InMemoryDbService } from 'angular-in-memory-web-api';
-// import { SearchService } from './search-service.service';
-// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { SearchService } from './search-service.service';
 import {AuthService} from './authService/auth.service';
+import {HttpClientModule} from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
 import { DatabaseService } from './database.service';
 import {AngularFireModule} from 'angularfire2';
@@ -41,9 +39,10 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     NgbModule.forRoot(),
+    HttpClientModule,
     HttpModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireDatabaseModule,
   ],
   providers: [
     HttpModule,
@@ -51,7 +50,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
     AuthService,
     LikedItemServiceService,
     HttpClient,
-    DatabaseService
+    // DatabaseService
   ],
 
   bootstrap: [AppComponent]
