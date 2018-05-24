@@ -32,10 +32,10 @@ export class ImageService {
       console.log('passed on url: ' + url);
       const images = this.http.get(url).subscribe(res => {
         // console.log(res);
-        console.log(res.items[0].name);
-        console.log(res.items[0].msrp);
-        console.log(res.items[0].largeImage);
-        console.log(res.items[0].shortDescription);
+        //console.log(res.items[0].name);
+        //console.log(res.items[0].msrp);
+        //console.log(res.items[0].largeImage);
+        //console.log(res.items[0].shortDescription);
         ImagesArray[0] = {
           'id' : 1,
           'caption' : <string>res.items[0].name,

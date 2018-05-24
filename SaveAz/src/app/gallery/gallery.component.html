@@ -1,5 +1,12 @@
 
 <body>
+<div class="input-group mb-3">
+  <input type="text" id="searchSubject" class="form-control" placeholder="Search...">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button" (click) = "search()" >Go</button>
+  </div>
+</div>
+
 <div class="row">
     <ul id="thumbnailsList">
         <li *ngFor = "let image of visibleImages">

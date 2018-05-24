@@ -10,13 +10,19 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class GalleryComponent implements OnInit {
+  apiRoot = 'https://api.walmartlabs.com/v1/search?apiKey=chwytn7wg8t344pf7eebg6sd&numItems=1&query=';
   title = 'Gallery';
   visibleImages: Item[];
+  searchSubject: string;
+  imageService: ImageService;
 
-  constructor(private imageService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {}
+
+  constructor(private imageService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {
+	  this.imageService = imageService;
+  }
 
   ngOnInit() {
-      this.getItems();
+      //this.getItems();
   }
 
   getItems() {
@@ -24,6 +30,16 @@ export class GalleryComponent implements OnInit {
     this.imageService.getImages().subscribe(visibleImages => this.visibleImages = visibleImages);
   }
 
+  search() {
+    this.searchSubject = (<HTMLInputElement>document.getElementById('searchSubject')).value;
+    let url = this.apiRoot + this.searchSubject;
+    if (this.searchSubject !== '') {
+      console.log('subject: ' + this.searchSubject);
+      this.imageService.searchIS(url);
+	this.getItems();
+    }
+  }
+  
   open(content) {
     this.modalService.open(content).result.then((result) => { });
     // this.closeResult = `Closed with: ${result}`;
