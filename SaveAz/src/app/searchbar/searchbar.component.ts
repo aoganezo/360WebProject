@@ -28,7 +28,6 @@ export class SearchbarComponent {
       console.log('subject: ' + this.searchSubject);
       this.is.searchIS(url);
 
-
     }
   }
 }

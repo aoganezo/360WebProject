@@ -41,11 +41,12 @@ export class ImageService {
            'id' : 1,
           'caption' : <string>JSON.parse(JSON.stringify(res)).items[0].name,
           'category' : JSON.parse(JSON.stringify(res)).items[0].msrp,
-          'url' : JSON.parse(JSON.stringify(res)).items[0].largeImage;
-        //   // 'caption' : res.items[0].shortDescription
+          'url' : JSON.parse(JSON.stringify(res)).items[0].largeImage,
+          // 'caption' : res.items[0].shortDescription
           };
         console.log(ImagesArray);
       });
+
 
 
       // console.log('x.items: ' + x.items);

@@ -1,16 +1,17 @@
 
 <body>
-<div class="input-group mb-3">
-  <input type="text" id="searchSubject" class="form-control" placeholder="Search...">
-  <div class="input-group-prepend">
-    <button class="btn btn-outline-secondary" type="button" (click) = "search()" >Go</button>
-  </div>
-</div>
+<!--<div class="input-group mb-3">-->
+  <!--<input type="text" id="searchSubject" class="form-control" placeholder="Search...">-->
+  <!--<div class="input-group-prepend">-->
+    <!--<button class="btn btn-outline-secondary" type="button" (click) = "search()" >Go</button>-->
+  <!--</div>-->
+<!--</div>-->
 
 <div class="row">
     <ul id="thumbnailsList">
-        <li *ngFor = "let image of visibleImages">
-          <div class="imageCaption">
+
+        <li *ngFor = "let image of visibleImages"  >
+          <div class="imageCaption" *ngIf="image.category !== 'testCategory'">
             <figure>
               <button id = "like{{image.id}}" class ="like" (click)="likeItem(image.id,image)" style="display: inline; background-image: url('../../assets/img/blankcircle.png')"></button>
               <button id = "unlike{{image.id}}" class ="unlike" (click)="unlikeItem(image.id,image)" style="display: none; background-image: url('../../assets/img/checkmark.png')"></button>
@@ -24,7 +25,7 @@
 
             <ng-template #content let-c="close" let-d="dismiss">
               <div class="modal-header" >
-                <h4 style="center" align="center" class="modal-title" >Modal title</h4>
+                <h4 style="center" align="center" class="modal-title">Modal title</h4>
                 <button style="float:center" align="center" type="button" class="close" aria-label="Close"  (click)="d('Cross click')" >
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -40,7 +41,7 @@
                 <p>&nbsp;</p>
                 <p style="float:center" align="center">Item Description</p>
                 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
-                
+
 
               </div>
 

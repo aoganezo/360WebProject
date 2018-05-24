@@ -22,7 +22,7 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit() {
-      // this.getItems();
+      this.getItems();
   }
 
   getItems() {
@@ -30,15 +30,6 @@ export class GalleryComponent implements OnInit {
     this.imageService.getImages().subscribe(visibleImages => this.visibleImages = visibleImages);
   }
 
-  search() {
-    this.searchSubject = (<HTMLInputElement>document.getElementById('searchSubject')).value;
-    const url = this.apiRoot + this.searchSubject;
-    if (this.searchSubject !== '') {
-      console.log('subject: ' + this.searchSubject);
-      this.imageService.searchIS(url);
-      this.getItems();
-    }
-  }
   open(content) {
     this.modalService.open(content).result.then((result) => { });
     // this.closeResult = `Closed with: ${result}`;
