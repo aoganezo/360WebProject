@@ -17,12 +17,12 @@ export class GalleryComponent implements OnInit {
   imageService: ImageService;
 
 
-  constructor(private imageService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {
-	  this.imageService = imageService;
+  constructor(private iService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {
+    this.imageService = iService;
   }
 
   ngOnInit() {
-      //this.getItems();
+      // this.getItems();
   }
 
   getItems() {
@@ -32,14 +32,13 @@ export class GalleryComponent implements OnInit {
 
   search() {
     this.searchSubject = (<HTMLInputElement>document.getElementById('searchSubject')).value;
-    let url = this.apiRoot + this.searchSubject;
+    const url = this.apiRoot + this.searchSubject;
     if (this.searchSubject !== '') {
       console.log('subject: ' + this.searchSubject);
       this.imageService.searchIS(url);
-	this.getItems();
+      this.getItems();
     }
   }
-  
   open(content) {
     this.modalService.open(content).result.then((result) => { });
     // this.closeResult = `Closed with: ${result}`;

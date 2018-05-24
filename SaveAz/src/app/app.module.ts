@@ -6,7 +6,7 @@ import { ImageService } from './image/shared/image.service';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-//import { SearchbarComponent } from './searchbar/searchbar.component';
+// import { SearchbarComponent } from './searchbar/searchbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemsLikedComponent } from './items-liked/items-liked.component';
@@ -15,7 +15,7 @@ import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {ProfileComponent} from './profile/profile.component';
 import { LikedItemServiceService } from './liked-item-service.service';
 import { HttpModule } from '@angular/http';
-import { SearchService } from './search-service.service';
+// import { SearchService } from './search-service.service';
 import {AuthService} from './authService/auth.service';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
@@ -27,7 +27,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 @NgModule({
   declarations: [
     AppComponent,
-    //SearchbarComponent,
+    // SearchbarComponent,
     DashboardComponent,
     ItemsLikedComponent,
     GalleryComponent,

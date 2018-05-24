@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ImageService } from './shared/image.service';
+import { ImageService } from '../image/shared/image.service';
 
 @Component({
     selector: 'app-image-detail',
