@@ -7,7 +7,7 @@ import { ImageService } from './image/shared/image.service';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchbarComponent } from './searchbar/searchbar.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemsLikedComponent } from './items-liked/items-liked.component';
 import { AlertsComponent } from './alerts/alerts.component';

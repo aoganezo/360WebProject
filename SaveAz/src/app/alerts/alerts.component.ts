@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
+import {Observable} from 'rxjs/Observable';
+
 
 @Component({
   selector: 'app-alerts',
@@ -7,11 +9,11 @@ import { ImageService } from '../image/shared/image.service';
   styleUrls: ['./alerts.component.css']
 })
 export class AlertsComponent implements OnInit {
-	
+
 	title = 'Gallery';
-    visibleImages: any[] = [];
-	
-  constructor(private imageService: ImageService) { 
+    visibleImages: Observable<Item[]>;
+
+  constructor(private imageService: ImageService) {
   this.visibleImages = this.imageService.getImages();
   }
 
