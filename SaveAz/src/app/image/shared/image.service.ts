@@ -30,18 +30,19 @@ export class ImageService {
 
     searchIS(url: string) {
       console.log('passed on url: ' + url);
-      const images = this.http.get(url).subscribe(res => {
-        // console.log(res);
+      let res;
+      this.http.get(url).subscribe( res => {
+         console.log(JSON.parse(JSON.stringify(res)).items);
         // console.log(res.items[0].name);
         // console.log(res.items[0].msrp);
         // console.log(res.items[0].largeImage);
         // console.log(res.items[0].shortDescription);
-        ImagesArray[0] = {
-          'id' : 1,
-          'caption' : <string>res.items[0].name,
-          'category' : res.items[0].msrp,
-          'url' : res.items[0].largeImage
-          // 'caption' : res.items[0].shortDescription
+        ImagesArray.value[0] = {
+           'id' : 1,
+          'caption' : <string>JSON.parse(JSON.stringify(res)).items[0].name,
+          'category' : JSON.parse(JSON.stringify(res)).items[0].msrp,
+          'url' : JSON.parse(JSON.stringify(res)).items[0].largeImage;
+        //   // 'caption' : res.items[0].shortDescription
           };
         console.log(ImagesArray);
       });
@@ -56,7 +57,7 @@ export class ImageService {
     }
 }
 
-let ImagesArray: Observable<Item[]> = of([
+const ImagesArray: Observable<Item[]> = of([
   {'id': 1, 'category': 'testCategory', 'caption': 'This is a test caption 1', 'url': 'assets/img/product.png'},
   {'id': 2, 'category': 'testCategory', 'caption': 'This is a test caption 2', 'url': 'assets/img/product.png'},
   {'id': 3, 'category': 'testCategory', 'caption': 'This is a test caption 3', 'url': 'assets/img/product.png'},
