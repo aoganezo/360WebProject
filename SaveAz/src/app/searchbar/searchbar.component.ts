@@ -31,10 +31,7 @@ export class SearchbarComponent {
  }
 
  keyDownFunction(event) {
-  if(event.keyCode == 13) {
-    //alert('you just clicked enter');
-    // rest of your code
-    console.log("enter hit");
+  if (event.keyCode === 13) {
     this.search();
   }
 }
