@@ -3,6 +3,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
+import {ScalarObservable} from 'rxjs/Observable/ScalarObservable';
 import { of } from 'rxjs/observable/of';
 import { GalleryComponent } from '../../gallery/gallery.component';
 
@@ -34,7 +35,8 @@ export class ImageService {
       this.http.get(url).subscribe( res => {
          console.log(JSON.parse(JSON.stringify(res)).items);
          res = JSON.parse(JSON.stringify(res)).items;
-         console.log(res);
+         console.log("numItems: "+res.length);
+         //for (let numItems = res.length; numItems >= res.length)
         ImagesArray.value.push({
           'id' : 1,
           'name' : <string>res[0].name,
@@ -47,6 +49,6 @@ export class ImageService {
     }
 }
 
-const ImagesArray: Observable<Item[]> = of([
+const ImagesArray: ScalarObservable<Item[]> = of([
 
-]);
+]) as ScalarObservable<Item[]>;
