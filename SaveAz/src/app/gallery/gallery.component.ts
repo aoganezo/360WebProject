@@ -10,10 +10,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class GalleryComponent implements OnInit {
-  apiRoot = 'https://api.walmartlabs.com/v1/search?apiKey=chwytn7wg8t344pf7eebg6sd&numItems=1&query=';
-  title = 'Gallery';
   visibleImages: Item[];
-  searchSubject: string;
   imageService: ImageService;
 
 

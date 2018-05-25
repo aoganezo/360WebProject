@@ -6,7 +6,7 @@
 }
 
 .btn {
-  background-color: #67eafc;
+  background-color: black;
   margin-bottom: 2%;
 
 }
@@ -56,7 +56,7 @@ figcaption {
 }
 
 button {
-    background-size: 100%; 
+    background-size: 100%;
     background-color: transparent;
     border: 0;
     height:35px;
