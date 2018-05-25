@@ -24,20 +24,12 @@ export class ImageService {
            ImagesArray.value.push({
              'id' : numItem,
              'name' : <string>res[numItem].name,
-             'price' : res[numItem].msrp,
+             'price' : res[numItem].salePrice,
              'url' : res[numItem].largeImage,
              'description' : res[numItem].shortDescription
            });
            console.log(ImagesArray);
          }
-      //   ImagesArray.value.push({
-      //     'id' : 1,
-      //     'name' : <string>res[0].name,
-      //     'price' : res[0].msrp,
-      //     'url' : res[0].largeImage,
-      //     'description' : res[0].shortDescription
-      //     });
-      //   console.log(ImagesArray);
        });
     }
 }
