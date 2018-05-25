@@ -35,8 +35,11 @@ export class ImageService {
       this.http.get(url).subscribe( res => {
          console.log(JSON.parse(JSON.stringify(res)).items);
          res = JSON.parse(JSON.stringify(res)).items;
-         console.log("numItems: "+res.length);
-         //for (let numItems = res.length; numItems >= res.length)
+         const resLen = JSON.parse(JSON.stringify(res)).length;
+         console.log("numItems: "+ resLen);
+         for (let numItems = resLen; numItems >= resLen; numItems--) {
+
+         }
         ImagesArray.value.push({
           'id' : 1,
           'name' : <string>res[0].name,
