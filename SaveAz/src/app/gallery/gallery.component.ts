@@ -29,21 +29,16 @@ export class GalleryComponent implements OnInit {
 
   open(content) {
     this.modalService.open(content).result.then((result) => { });
-    // this.closeResult = `Closed with: ${result}`;
-    // }, (reason) => {
-    // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-  // });
   }
 
   likeItem(id, image: Object[]) {
-      const likeId = 'like'.concat(id);
-      const unlikeId = 'unlike'.concat(id);
-      this.itemService.addLikedItem(image);
-      const likeButton = document.getElementById(likeId);
-      const unlikeButton = document.getElementById(unlikeId);
-      likeButton.style.display = 'none';
-      unlikeButton.style.display = 'inline';
-     // button.ng-click = "unlikeItem(image)";
+    const likeId = 'like'.concat(id);
+    const unlikeId = 'unlike'.concat(id);
+    this.itemService.addLikedItem(image);
+    const likeButton = document.getElementById(likeId);
+    const unlikeButton = document.getElementById(unlikeId);
+    likeButton.style.display = 'none';
+    unlikeButton.style.display = 'inline';
   }
 
   unlikeItem(id, image: Object[]) {
@@ -52,7 +47,7 @@ export class GalleryComponent implements OnInit {
     this.itemService.removeLikedItem(image);
     const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
-     likeButton.style.display = 'inline';
-     unlikeButton.style.display = 'none';
-    }
+    likeButton.style.display = 'inline';
+    unlikeButton.style.display = 'none';
+  }
 }

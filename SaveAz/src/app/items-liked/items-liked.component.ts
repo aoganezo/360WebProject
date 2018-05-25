@@ -7,14 +7,12 @@ import { LikedItemServiceService } from '../liked-item-service.service';
   styleUrls: ['./items-liked.component.css']
 })
 export class ItemsLikedComponent implements OnInit {
+  likedItems = [];
 
-	likedItems = [];
-
-  constructor(public itemService : LikedItemServiceService) { }
+  constructor(public itemService: LikedItemServiceService) { }
 
   ngOnInit() {
-	  this.itemService.getLikedItems()
-	  .subscribe(likedItems => this.likedItems = likedItems);
+    this.itemService.getLikedItems()
+      .subscribe(likedItems => this.likedItems = likedItems);
   }
-
 }

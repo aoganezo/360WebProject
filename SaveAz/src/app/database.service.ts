@@ -4,8 +4,8 @@ import { Observable } from '../../node_modules/rxjs';
 
 @Injectable()
 export class DatabaseService {
-  items: Observable<any[]>;
-  constructor(db: AngularFireDatabase) {
-    this.items = db.list('items').valueChanges();
-  }
+  // items: Observable<any[]>;
+  // constructor(db: AngularFireDatabase) {
+  //   this.items = db.list('items').valueChanges();
+  // }
 }
