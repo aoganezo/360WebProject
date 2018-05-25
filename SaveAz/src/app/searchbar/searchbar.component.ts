@@ -27,9 +27,19 @@ export class SearchbarComponent {
     if (this.searchSubject !== '') {
       console.log('subject: ' + this.searchSubject);
       this.is.searchIS(url);
-
     }
+ }
+
+ keyDownFunction(event) {
+  if(event.keyCode == 13) {
+    //alert('you just clicked enter');
+    // rest of your code
+    console.log("enter hit");
+    this.search();
   }
+}
+
+
 }
 
 // chwytn7wg8t344pf7eebg6sd
