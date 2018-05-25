@@ -1,6 +1,8 @@
 class Item {
   id: number;
-  caption: string;
-  category: string;
+  name: string;
+  price: string;
   url: string;
+  description: string;
 }
+
