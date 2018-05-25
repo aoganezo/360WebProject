@@ -23,7 +23,7 @@ export class SearchbarComponent {
 
   search() {
     this.searchSubject = (<HTMLInputElement>document.getElementById('searchSubject')).value;
-    let url = this.apiRoot + this.searchSubject;
+    const url = this.apiRoot + this.searchSubject;
     if (this.searchSubject !== '') {
       console.log('subject: ' + this.searchSubject);
       this.is.searchIS(url);
