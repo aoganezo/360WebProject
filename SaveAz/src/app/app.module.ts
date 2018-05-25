@@ -15,7 +15,6 @@ import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {ProfileComponent} from './profile/profile.component';
 import { LikedItemServiceService } from './liked-item-service.service';
 import { HttpModule } from '@angular/http';
-//import { SearchService } from './search-service.service';
 import {AuthService} from './authService/auth.service';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
