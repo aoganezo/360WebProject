@@ -10,21 +10,21 @@ export class LikedItemServiceService {
 
   constructor() { }
 
-   getLikedItems(): Observable<Object[]>{
+   getLikedItems(): Observable<Object[]> {
      return of(this.likedItems);
    }
 
-  addLikedItem(image:Object[]):void{
-	  this.likedItems.push(image);
+  addLikedItem(image: Object[]): void {
+    this.likedItems.push(image);
     console.log(this.likedItems);
    }
 
-  removeLikedItem(image:Object[]):void{
-    let index = this.likedItems.indexOf(image);
-	   if(index > -1){
-	 	this.likedItems.splice(index);
+  removeLikedItem(image: Object[]): void {
+    const index = this.likedItems.indexOf(image);
+    if (index > -1) {
+      this.likedItems.splice(index);
        console.log(this.likedItems);
-	  }
+    }
    }
 
 }
