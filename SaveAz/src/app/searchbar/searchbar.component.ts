@@ -23,13 +23,20 @@ export class SearchbarComponent {
 
   search() {
     this.searchSubject = (<HTMLInputElement>document.getElementById('searchSubject')).value;
-    let url = this.apiRoot + this.searchSubject;
+    const url = this.apiRoot + this.searchSubject;
     if (this.searchSubject !== '') {
       console.log('subject: ' + this.searchSubject);
       this.is.searchIS(url);
-
     }
+ }
+
+ keyDownFunction(event) {
+  if (event.keyCode === 13) {
+    this.search();
   }
+}
+
+
 }
 
 // chwytn7wg8t344pf7eebg6sd

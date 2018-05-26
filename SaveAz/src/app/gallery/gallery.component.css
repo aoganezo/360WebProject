@@ -5,12 +5,6 @@
   margin-bottom: 2%;
 }
 
-.btn {
-  background-color: black;
-  margin-bottom: 2%;
-
-}
-
 ul {
     width: 1046px;
     text-align: center;
@@ -21,6 +15,11 @@ li {
     display: inline-block;
     margin: 5px;
     margin-bottom: 10px;
+}
+
+.urlImage{
+    border: black 2px;
+    margin-bottom: 2%;
 }
 
 .imageCaption {

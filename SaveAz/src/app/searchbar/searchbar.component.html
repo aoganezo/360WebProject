@@ -1,5 +1,5 @@
 <div class="input-group mb-3">
-  <input type="text" id="searchSubject" class="form-control" placeholder="Search...">
+  <input (keydown)="keyDownFunction($event)" type="text" id="searchSubject" class="form-control" placeholder="Search...">
   <div class="input-group-prepend">
     
     <button style="border: #E8E8E8;" class="btn btn-outline-secondary" type="button" (click) = "search()" >Go</button>
