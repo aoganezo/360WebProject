@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\gallery",
+    "\\src\\app\\image",
+    "\\src\\app\\image\\shared",
+    "\\src\\app\\searchbar"
+  ],
+  "SelectedNode": "\\src\\app\\searchbar\\searchbar.component.html",
+  "PreviewInSolutionExplorer": false
+}
