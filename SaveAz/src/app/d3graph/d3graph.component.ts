@@ -8,11 +8,17 @@ import { ImageService } from '../image/shared/image.service'
 })
 export class D3graphComponent implements OnInit {
 
-  constructor() {
+  chart = [];
+
+  constructor(private imageService : ImageService) {
   }
 
   ngOnInit() {
-
+    this.imageService.getImages()
+      .subscribe(res => {
+        let minRating = 0;
+        let allRatings = res.map(res =>Number(res.rating))
+      })
   }
 
 }

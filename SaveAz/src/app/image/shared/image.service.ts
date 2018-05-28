@@ -27,7 +27,8 @@ export class ImageService {
              'name' : <string>res[numItem].name,
              'price' : res[numItem].salePrice,
              'url' : res[numItem].largeImage,
-             'description' : res[numItem].shortDescription
+             'description' : res[numItem].shortDescription,
+             'rating' : res[numItem].customerRating,
            });
            console.log(ImagesArray);
          }

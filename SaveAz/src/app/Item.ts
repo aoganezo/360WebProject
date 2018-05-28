@@ -4,5 +4,6 @@ class Item {
   price: string;
   url: string;
   description: string;
+  rating: string;
 }
 
