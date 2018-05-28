@@ -1,5 +1,0 @@
-<div class="graph">
-  <div class="y">Products</div>
-  <div class="x">Prices</div>
-<div *ngFor="let bar of data" class="bar" style="height:{{bar.value / max * height}}; width: {{width / data.length - 5}}; left:{{index / data.length * width}};"></div>
-</div>
