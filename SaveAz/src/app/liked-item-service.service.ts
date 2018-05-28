@@ -2,19 +2,20 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
+
+// import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
+// import { AngularFireAuth } from 'angularfire2/auth';
+// import * as firebase from 'firebase/app';
 
 @Injectable()
 export class LikedItemServiceService {
 
   likedItems: Object[] = [];
-  item: Observable<Item | null>;
-  itemCollection: AngularFirestoreCollection<Item>;
+  // item: Observable<Item | null>;
+  // itemCollection: AngularFirestoreCollection<Item>;
 
-  constructor(afs: AngularFirestore) {
+  constructor() { // afs: AngularFirestore) {
     // this.likedItems = <any>db.collection('/items').valueChanges();
     // this.itemCollection = this.afs.collection('items');
   }
@@ -36,20 +37,20 @@ export class LikedItemServiceService {
     }
   }
 
-  pushFav(itemId: Item): void {
-    // const id = this.afs.createID();
-    // itemId.id = id;
-    // this.booksCollection.add(itemId);
-    // const collection: AngularFirestoreCollection<Item> = aft.collection('items');
-    //
-    // collection.update('');
-    // collection.delete();
-
-// Notice how the observable is separated from write options
-
-    // const collection$: Observable<Item> = collection.valueChanges();
-    // collection$.subscribe(data => console.log(data));
-
-  }
+  // pushFav(itemId: Item): void {
+  //   // const id = this.afs.createID();
+  //   // itemId.id = id;
+  //   // this.booksCollection.add(itemId);
+  //   // const collection: AngularFirestoreCollection<Item> = aft.collection('items');
+  //   //
+  //   // collection.update('');
+  //   // collection.delete();
+  //
+  //   // Notice how the observable is separated from write options
+  //
+  //   // const collection$: Observable<Item> = collection.valueChanges();
+  //   // collection$.subscribe(data => console.log(data));
+  //
+  // }
 
 }
