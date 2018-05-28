@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
 import {Observable} from 'rxjs/Observable';
-import { Item } from 'Item';
+// import { Item } from 'Item';
 
 
 @Component({
