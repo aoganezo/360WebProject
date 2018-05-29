@@ -57,12 +57,12 @@ export class GalleryComponent implements OnInit {
   generateChart() {
     this.imageService.getImages()
       .subscribe(res => {
-        let productNames = this.visibleImages.map(res => res.name);
-        let allRatings = res.map(res =>Number(res.rating));
+        const productNames = this.visibleImages.map(res => res.name);
+        const allRatings = res.map(res => Number(res.rating));
 
-        let canvas = document.getElementsByTagName("canvas");
-        let ctx = canvas[0].getContext('2d');
-        this.chart = new Chart(ctx,{
+        const canvas = document.getElementsByTagName('canvas');
+        const ctx = canvas[0].getContext('2d');
+        this.chart = new Chart(ctx, {
           type: 'bar',
           data : {
             labels : productNames,
@@ -74,15 +74,33 @@ export class GalleryComponent implements OnInit {
             }]
           },
           options: {
+            legend: {
+              display: false
+            },
+
             scales: {
               yAxes: [{
                 ticks: {
                   beginAtZero : true
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Rating'
                 }
+              }],
+              xAxes: [{
+                ticks: {
+                  autoSkip: false
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Products'
+                },
+
               }]
             }
           }
-        })
-      })
+        });
+      });
   }
 }
