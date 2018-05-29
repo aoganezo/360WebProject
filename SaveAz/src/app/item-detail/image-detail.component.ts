@@ -7,6 +7,6 @@ import { ImageService } from '../image/shared/image.service';
     styleUrls: ['./image-detail.component.css']
 })
 
-export class ImageDetailComponent{
-    constructor(private imageService: ImageService){}
+export class ImageDetailComponent {
+    constructor(private imageService: ImageService) {}
 }
