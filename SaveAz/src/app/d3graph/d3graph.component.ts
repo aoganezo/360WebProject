@@ -8,11 +8,43 @@ import { ImageService } from '../image/shared/image.service'
 })
 export class D3graphComponent implements OnInit {
 
-  constructor() {
+  chart: Chart;
+
+  constructor(private imageService : ImageService) {
   }
 
-  ngOnInit() {
+  ngOnInit(){
 
+  }
+
+  generateChart() {
+    this.imageService.getImages()
+      .subscribe(res => {
+        let productNames = res.map(res => res.name);
+        let allRatings = res.map(res =>Number(res.rating));
+
+        this.chart = new Chart('canvas',{
+          type: 'bar',
+          data : {
+            labels : productNames,
+            datasets : [{
+                data: allRatings,
+                backgroundColor: 'blue',
+                borderColor: 'black',
+                borderWidth: 1
+              }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero : true
+                }
+              }]
+            }
+          }
+        })
+      })
   }
 
 }

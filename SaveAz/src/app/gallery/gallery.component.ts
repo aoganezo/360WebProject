@@ -2,6 +2,7 @@ import { Component, OnChanges, OnInit } from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
 import { LikedItemServiceService } from '../liked-item-service.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {Chart} from 'chart.js';
 
 @Component({
     selector: 'app-gallery',
@@ -12,6 +13,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 export class GalleryComponent implements OnInit {
   visibleImages: Item[];
   imageService: ImageService;
+  chart: Chart;
 
 
   constructor(private iService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {
@@ -29,6 +31,7 @@ export class GalleryComponent implements OnInit {
 
   open(content) {
     this.modalService.open(content).result.then((result) => { });
+    this.generateChart();
   }
 
   likeItem(id, image: Object[]) {
@@ -49,5 +52,37 @@ export class GalleryComponent implements OnInit {
     const unlikeButton = document.getElementById(unlikeId);
     likeButton.style.display = 'inline';
     unlikeButton.style.display = 'none';
+  }
+
+  generateChart() {
+    this.imageService.getImages()
+      .subscribe(res => {
+        let productNames = this.visibleImages.map(res => res.name);
+        let allRatings = res.map(res =>Number(res.rating));
+
+        let canvas = document.getElementsByTagName("canvas");
+        let ctx = canvas[0].getContext('2d');
+        this.chart = new Chart(ctx,{
+          type: 'bar',
+          data : {
+            labels : productNames,
+            datasets : [{
+              data: allRatings,
+              backgroundColor: 'blue',
+              borderColor: 'black',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero : true
+                }
+              }]
+            }
+          }
+        })
+      })
   }
 }
