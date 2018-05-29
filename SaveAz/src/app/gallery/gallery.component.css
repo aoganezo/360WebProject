@@ -42,12 +42,13 @@ figure img {
 }
 
 figcaption {
-    display: table-caption;
-    caption-side: bottom;
-    text-align: left;
-    font-size: smaller;
-    font-weight: 800;
-    padding: 15px;
+  display: table-caption;
+  caption-side: bottom;
+  text-align: left;
+  font-size: smaller;
+  font-weight: 800;
+  padding: 10px;
+  font-size: 12px;
 }
 
 #thumbnailsList {
