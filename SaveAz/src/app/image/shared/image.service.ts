@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {ScalarObservable} from 'rxjs/Observable/ScalarObservable';
 import { of } from 'rxjs/observable/of';
+import {} from 'jasmine';
 // import { Item } from 'Item';
 
 @Injectable()
@@ -34,8 +35,7 @@ export class ImageService {
          }
        });
     }
-
-    checkIsFavorite() {}
+    checkIsFavorite() { }
 }
 
 
