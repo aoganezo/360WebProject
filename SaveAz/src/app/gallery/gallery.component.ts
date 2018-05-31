@@ -14,6 +14,9 @@ export class GalleryComponent implements OnInit {
   visibleImages: Item[];
   imageService: ImageService;
   chart: Chart;
+  productNames: any[];
+  allRatings: number[];
+  allPrices: number[];
 
 
   constructor(private iService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {
@@ -57,50 +60,116 @@ export class GalleryComponent implements OnInit {
   generateChart() {
     this.imageService.getImages()
       .subscribe(res => {
-        const productNames = this.visibleImages.map(res => res.name);
-        const allRatings = res.map(res => Number(res.rating));
+        this.productNames = this.visibleImages.map(res => res.name);
+        this.allRatings = res.map(res => Number(res.rating));
+        this.allPrices = res.map(res => Number(res.price));
+        this.loadPriceChart();
+      });
+  }
+  loadPriceChart() {
+    if (this.chart) {
+      this.chart.destroy();
+    }
+    const canvas = document.getElementsByTagName('canvas');
+    const ctx = canvas[0].getContext('2d');
 
-        const canvas = document.getElementsByTagName('canvas');
-        const ctx = canvas[0].getContext('2d');
-        this.chart = new Chart(ctx, {
-          type: 'bar',
-          data : {
-            labels : productNames,
-            datasets : [{
-              data: allRatings,
-              backgroundColor: 'blue',
-              borderColor: 'black',
-              borderWidth: 1
-            }]
-          },
-          options: {
-            legend: {
-              display: false
+    this.chart = new Chart(ctx, {
+      type: 'bar',
+      data : {
+        labels : this.productNames,
+        datasets : [
+          {
+            data: this.allPrices,
+            backgroundColor: 'yellow',
+            borderColor: 'black',
+            borderWidth: 1
+          }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        legend: {
+          display: false
+        },
+
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero : true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Prices'
+            }
+          }],
+          xAxes: [{
+            display: false,
+            ticks: {
+              autoSkip: false
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Products'
             },
 
-            scales: {
-              yAxes: [{
-                ticks: {
-                  beginAtZero : true
-                },
-                scaleLabel: {
-                  display: true,
-                  labelString: 'Rating'
-                }
-              }],
-              xAxes: [{
-                ticks: {
-                  autoSkip: false
-                },
-                scaleLabel: {
-                  display: true,
-                  labelString: 'Products'
-                },
+          }]
+        },
+      }
+    });
+    const RatingButton = document.getElementById('showRatings');
+    const PriceButton = document.getElementById('showPrices');
+    RatingButton.style.display = 'inline';
+    PriceButton.style.display = 'none';
+  }
+  loadRatingChart() {
+    if (this.chart) {
+      this.chart.destroy();
+    }
+    const canvas = document.getElementsByTagName('canvas');
+    const ctx = canvas[0].getContext('2d');
+    this.chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: this.productNames,
+        datasets: [{
+          data: this.allRatings,
+          backgroundColor: 'blue',
+          borderColor: 'black',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        legend: {
+          display: false
+        },
 
-              }]
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Rating'
             }
-          }
-        });
-      });
+          }],
+          xAxes: [{
+            display: false,
+            ticks: {
+              autoSkip: false
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Products'
+            },
+
+          }]
+        }
+      }
+    });
+    const RatingButton = document.getElementById('showRatings');
+    const PriceButton = document.getElementById('showPrices');
+    RatingButton.style.display = 'none';
+    PriceButton.style.display = 'inline';
   }
 }
