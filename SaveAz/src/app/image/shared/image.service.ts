@@ -38,6 +38,5 @@ export class ImageService {
     checkIsFavorite() { }
 }
 
-
 const ImagesArray: ScalarObservable<Item[]> =
   of([]) as ScalarObservable<Item[]>;

@@ -18,11 +18,9 @@ import { HttpModule } from '@angular/http';
 import { AuthService } from './authService/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { D3graphComponent} from './d3graph/d3graph.component';
 
 import { environment } from '../environments/environment';
 export const firebaseConfig = environment.firebase;
-import { DatabaseService } from './database.service';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 
@@ -36,7 +34,6 @@ import { AngularFireModule } from 'angularfire2';
     GalleryComponent,
     AlertsComponent,
     ProfileComponent,
-    D3graphComponent
   ],
   imports: [
     BrowserModule,
@@ -53,8 +50,6 @@ import { AngularFireModule } from 'angularfire2';
     ImageService,
     AuthService,
     LikedItemServiceService,
-    HttpClient,
-    DatabaseService
   ],
 
   bootstrap: [AppComponent]

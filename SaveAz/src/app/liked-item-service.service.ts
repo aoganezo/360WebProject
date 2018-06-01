@@ -36,21 +36,4 @@ export class LikedItemServiceService {
       console.log(this.likedItems);
     }
   }
-
-  // pushFav(itemId: Item): void {
-  //   // const id = this.afs.createID();
-  //   // itemId.id = id;
-  //   // this.booksCollection.add(itemId);
-  //   // const collection: AngularFirestoreCollection<Item> = aft.collection('items');
-  //   //
-  //   // collection.update('');
-  //   // collection.delete();
-  //
-  //   // Notice how the observable is separated from write options
-  //
-  //   // const collection$: Observable<Item> = collection.valueChanges();
-  //   // collection$.subscribe(data => console.log(data));
-  //
-  // }
-
 }
