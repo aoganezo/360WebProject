@@ -55,7 +55,7 @@ figcaption {
       margin-top: 1%;
 }
 
-button {
+.like, .unlike {
     background-size: 100%;
     background-color: transparent;
     border: 0;
@@ -63,6 +63,7 @@ button {
     width:35px;
     text-align: center;
     position: absolute;
+    display: inline;
 }
 
 * {

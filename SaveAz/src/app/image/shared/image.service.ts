@@ -24,7 +24,7 @@ export class ImageService {
          console.log('numItems: ' + numItems);
          for (let numItem = 0; numItem < numItems; numItem++) {
            ImagesArray.value.push({
-             'id' : numItem,
+             'id' : res[numItem].itemId,
              'name' : <string>res[numItem].name,
              'price' : res[numItem].salePrice,
              'url' : res[numItem].largeImage,

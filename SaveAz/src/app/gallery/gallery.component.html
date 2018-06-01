@@ -12,8 +12,10 @@
 
         <li *ngFor = "let image of visibleImages"  >
           <div class="imageCaption" *ngIf="image.category !== 'testCategory'">
-              <button id = "like{{image.id}}" class ="like" (click)="likeItem(image.id,image)" style="display: inline; background-image: url('../../assets/img/blankcircle.png')"></button>
-              <button id = "unlike{{image.id}}" class ="unlike" (click)="unlikeItem(image.id,image)" style="display: none; background-image: url('../../assets/img/checkmark.png')"></button>
+            <div id="likeButtons">
+              <button id = "like{{image.id}}" class ="like" (click)="likeItem(image.id,image)" [hidden]="isLiked(image)" style="float: left; background-image: url('../../assets/img/blankcircle.png')"></button>
+              <button id = "unlike{{image.id}}" class ="unlike" (click)="unlikeItem(image.id,image)" [hidden]="!isLiked(image)" style="float: left; background-image: url('../../assets/img/checkmark.png')"></button>
+            </div>
             <a (click)="open(content)">
             <figure>
                   <img class="urlImage" src={{image.url}} width = "200" height = "200" style="border:4px solid #f2f2f2">
@@ -52,6 +54,10 @@
                 <p align="center" style="padding: 1em">Top Rated Items Related To Your Search</p>
                 <div>
                   <canvas id="myCanvas" style="height: 500px; width: 500px; border: 4px solid #f2f2f2;"  align ="right">{{chart}}</canvas>
+                </div>
+                <div>
+                  <button id = "showRatings" (click)="loadRatingChart()" style="display: inline;">See Product Ratings</button>
+                  <button id = "showPrices" (click)="loadPriceChart()" style="display: none;">See Product Prices</button>
                 </div>
               </div>
 
