@@ -30,12 +30,12 @@ class MockImageService extends ImageService {
 }
 
 class MockLikedItemService extends LikedItemServiceService {
-  constructor() {
-    super(null);
+  constructor() { 
+    super();
   }
 }
 
-fdescribe('DashboardComponent', () => {
+describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
 
