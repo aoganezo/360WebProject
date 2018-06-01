@@ -37,7 +37,7 @@ export class GalleryComponent implements OnInit {
     this.generateChart();
   }
 
-  likeItem(id, image: Object[]) {
+  likeItem(id, image: Item) {
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.addLikedItem(image);
@@ -47,14 +47,33 @@ export class GalleryComponent implements OnInit {
     unlikeButton.style.display = 'inline';
   }
 
-  unlikeItem(id, image: Object[]) {
+  unlikeItem(id, image: Item) {
+    console.log(id);
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.removeLikedItem(image);
+    console.log('removed from service');
     const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
     likeButton.style.display = 'inline';
     unlikeButton.style.display = 'none';
+    console.log('unlike completed');
+  }
+
+  isLiked(image: Item): boolean {
+    let likedItems: Item[] = [];
+    this.itemService.getLikedItems()
+      .subscribe(res => {
+        likedItems = res;
+      });
+    let i: number;
+    for ( i = 0 ; i < likedItems.length ; i++) {
+      // console.log(likedItems[i].name + ': ' + image.name + ': ' + (likedItems[i].name === image.name));
+      if (likedItems[i].name === image.name) {
+        return true;
+      }
+    }
+    return false;
   }
 
   generateChart() {

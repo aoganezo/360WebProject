@@ -11,7 +11,7 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class LikedItemServiceService {
 
-  likedItems: Object[] = [];
+  likedItems: Item[] = [];
   // item: Observable<Item | null>;
   // itemCollection: AngularFirestoreCollection<Item>;
 
@@ -20,19 +20,19 @@ export class LikedItemServiceService {
     // this.itemCollection = this.afs.collection('items');
   }
 
-   getLikedItems(): Observable<Object[]> {
+   getLikedItems(): Observable<Item[]> {
      return of(this.likedItems);
    }
 
-  addLikedItem(image: Object[]): void {
+  addLikedItem(image: Item): void {
     this.likedItems.push(image);
     console.log(this.likedItems);
    }
 
-  removeLikedItem(image: Object[]): void {
+  removeLikedItem(image: Item): void {
     const index = this.likedItems.indexOf(image);
     if (index > -1) {
-      this.likedItems.splice(index);
+      this.likedItems.splice(index, 1);
       console.log(this.likedItems);
     }
   }

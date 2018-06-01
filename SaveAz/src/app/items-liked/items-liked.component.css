@@ -1,0 +1,76 @@
+.input-group {
+  width: 45%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+ul {
+  width: 1046px;
+  text-align: center;
+  margin: auto;
+}
+
+li {
+  display: inline-block;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.urlImage{
+  border: black 2px;
+  margin-bottom: 2%;
+}
+
+.imageCaption {
+  display: inline-block;
+  padding: 3px;
+  margin: 0;
+  border: thin silver solid;
+  box-shadow: #555 1px 1px 8px 1px;
+  max-height: 315px;
+  min-height: 315px;
+  overflow: hidden;
+}
+figure {
+  display: inline-table;
+  margin: 0px;
+}
+
+figure img {
+  display: block;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  text-align: left;
+  font-size: smaller;
+  font-weight: 800;
+  padding: 10px;
+  font-size: 12px;
+}
+
+#thumbnailsList {
+  margin-top: 1%;
+}
+
+.like, .unlike {
+  background-size: 100%;
+  background-color: transparent;
+  border: 0;
+  height:35px;
+  width:35px;
+  text-align: center;
+  position: absolute;
+  display: inline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-bottom: 50px;
+}
