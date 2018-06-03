@@ -4,10 +4,6 @@ import {filter, mergeMap} from 'rxjs/operators';
 import * as auth0 from 'auth0-js';
 import { ModuleWithProviders} from '@angular/compiler/src/core';
 import { AngularFireAuthModule} from 'angularfire2/auth';
-<<<<<<< HEAD
-import { AuthGuard } from './auth.guard';
-=======
->>>>>>> 6aa3c12dee2c858d57137ec61488462d0d93cd0a
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
