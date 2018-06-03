@@ -5,32 +5,31 @@ import { of } from 'rxjs/observable/of';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 
 @Injectable()
-export class LikedItemServiceService{
+export class LikedItemServiceService {
 
   itemsCol: AngularFirestoreCollection<Item>;
   items: Observable<any[]>;
 
-
-  likedItems: Object[] = [];
+  likedItems: Item[] = [];
 
   constructor(private db: AngularFirestore) {
     this.itemsCol = this.db.collection('items');
   }
 
-   getLikedItems(): Observable<Object[]> {
+   getLikedItems(): Observable<Item[]> {
      return of(this.likedItems);
    }
 
-  addLikedItem(image: Object[]): void {
+  addLikedItem(image: Item): void {
     this.likedItems.push(image);
     this.db.collection('items').doc('test-add').set(image);
     console.log(this.likedItems);
    }
 
-  removeLikedItem(image: Object[]): void {
+  removeLikedItem(image: Item): void {
     const index = this.likedItems.indexOf(image);
     if (index > -1) {
-      this.likedItems.splice(index);
+      this.likedItems.splice(index, 1);
       console.log(this.likedItems);
     }
   }
