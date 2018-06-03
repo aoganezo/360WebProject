@@ -14,7 +14,7 @@ export class AlertsComponent implements OnInit {
   visibleImages: Observable<Item[]>;
 
   constructor(private imageService: ImageService) {
-  this.visibleImages = this.imageService.getImages();
+    this.visibleImages = this.imageService.getImages();
   }
 
   ngOnInit() {
