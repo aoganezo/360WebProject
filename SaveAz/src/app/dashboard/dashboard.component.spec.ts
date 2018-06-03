@@ -11,7 +11,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 class MockAuthService extends AuthService {
   constructor() {
-    super(null);
+    super(null,null,null);
   }
   // testContacts: Array<Contact> = [
   //   new Contact('test1 mock', 12345, 10000),
