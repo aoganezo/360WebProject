@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import {AuthService} from './authService/auth.service';
 
 @Injectable()
 export class LikedItemServiceService {
@@ -12,8 +13,12 @@ export class LikedItemServiceService {
 
   likedItems: Item[] = [];
 
-  constructor(private db: AngularFirestore) {
+  constructor(
+    private db: AngularFirestore,
+    public auth: AuthService
+  ) {
     this.itemsCol = this.db.collection('items');
+
   }
 
    getLikedItems(): Observable<Item[]> {
@@ -22,7 +27,7 @@ export class LikedItemServiceService {
 
   addLikedItem(image: Item): void {
     this.likedItems.push(image);
-    this.db.collection('items').doc(image.id.toString()).set(image);
+    this.db.collection(this.auth.userProfile.uid).doc(image.id.toString()).set(image);
     console.log(this.likedItems);
    }
 
