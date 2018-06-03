@@ -22,7 +22,7 @@ export class LikedItemServiceService {
 
   addLikedItem(image: Item): void {
     this.likedItems.push(image);
-    this.db.collection('items').doc('test-add').set(image);
+    this.db.collection('items').doc(image.id.toString()).set(image);
     console.log(this.likedItems);
    }
 
@@ -32,5 +32,6 @@ export class LikedItemServiceService {
       this.likedItems.splice(index, 1);
       console.log(this.likedItems);
     }
+    this.db.collection('items').doc(image.id.toString()).delete();
   }
 }
