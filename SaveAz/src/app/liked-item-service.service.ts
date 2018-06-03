@@ -27,9 +27,19 @@ export class LikedItemServiceService {
 
   addLikedItem(image: Item): void {
     this.likedItems.push(image);
-    this.db.collection(this.auth.userProfile.uid).doc(image.id.toString()).set(image);
+    // console.log("uid: "+this.auth.userProfile.uid.toString())
+    // console.log((JSON).parse("profile: "+this.auth.userProfile).toString());
+    // for ( let prop in this.auth.userProfile) {
+    //   console.log( 'Obj ' + prop );
+    // }
+    // console.log("wat");
+    console.log('sub: ' + this.auth.userProfile.sub);
+    let temp = this.auth.userProfile.sub.toString();
+
+
+    this.db.collection(temp).doc(image.id.toString()).set(image);
     console.log(this.likedItems);
-   }
+  }
 
   removeLikedItem(image: Item): void {
     const index = this.likedItems.indexOf(image);
