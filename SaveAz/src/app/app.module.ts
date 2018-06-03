@@ -21,11 +21,13 @@ import { HttpClient } from '@angular/common/http';
 import { D3graphComponent} from './d3graph/d3graph.component';
 
 import { environment } from '../environments/environment';
-export const firebaseConfig = environment.firebase;
-import { DatabaseService } from './database.service';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireModule } from 'angularfire2';
+// export const firebaseConfig = environment.firebase;
+// import { DatabaseService } from './database.service';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
+// import { AngularFireModule } from 'angularfire2';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [
@@ -45,16 +47,16 @@ import { AngularFireModule } from 'angularfire2';
     NgbModule.forRoot(),
     HttpClientModule,
     HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [
     HttpModule,
     ImageService,
     AuthService,
     LikedItemServiceService,
-    HttpClient,
-    DatabaseService
+    HttpClient
+    // DatabaseService
   ],
 
   bootstrap: [AppComponent]

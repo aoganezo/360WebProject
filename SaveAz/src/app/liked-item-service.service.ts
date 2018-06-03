@@ -1,23 +1,20 @@
 import { Injectable } from '@angular/core';
-
+import { AppComponent } from './app.component';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-
-// import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
-// import { AngularFirestoreModule } from 'angularfire2/firestore';
-// import { AngularFireAuth } from 'angularfire2/auth';
-// import * as firebase from 'firebase/app';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 
 @Injectable()
-export class LikedItemServiceService {
+export class LikedItemServiceService{
+
+  itemsCol: AngularFirestoreCollection<Item>;
+  items: Observable<any[]>;
+
 
   likedItems: Object[] = [];
-  // item: Observable<Item | null>;
-  // itemCollection: AngularFirestoreCollection<Item>;
 
-  constructor() { // afs: AngularFirestore) {
-    // this.likedItems = <any>db.collection('/items').valueChanges();
-    // this.itemCollection = this.afs.collection('items');
+  constructor(private db: AngularFirestore) {
+    this.itemsCol = this.db.collection('items');
   }
 
    getLikedItems(): Observable<Object[]> {
@@ -26,6 +23,7 @@ export class LikedItemServiceService {
 
   addLikedItem(image: Object[]): void {
     this.likedItems.push(image);
+    this.db.collection('items').doc('test-add').set(image);
     console.log(this.likedItems);
    }
 
@@ -36,21 +34,4 @@ export class LikedItemServiceService {
       console.log(this.likedItems);
     }
   }
-
-  // pushFav(itemId: Item): void {
-  //   // const id = this.afs.createID();
-  //   // itemId.id = id;
-  //   // this.booksCollection.add(itemId);
-  //   // const collection: AngularFirestoreCollection<Item> = aft.collection('items');
-  //   //
-  //   // collection.update('');
-  //   // collection.delete();
-  //
-  //   // Notice how the observable is separated from write options
-  //
-  //   // const collection$: Observable<Item> = collection.valueChanges();
-  //   // collection$.subscribe(data => console.log(data));
-  //
-  // }
-
 }

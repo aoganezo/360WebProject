@@ -8,7 +8,7 @@ import { ImageService } from '../image/shared/image.service';
 })
 
 export class SearchbarComponent {
-  apiRoot = 'https://api.walmartlabs.com/v1/search?apiKey=chwytn7wg8t344pf7eebg6sd&numItems=16&query=';
+  apiRoot = 'https://cors.now.sh/https://api.walmartlabs.com/v1/search?apiKey=chwytn7wg8t344pf7eebg6sd&numItems=16&query=';
   results: Object[];
   loading: boolean;
   searchSubject: string;
