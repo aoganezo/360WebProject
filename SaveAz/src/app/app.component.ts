@@ -12,6 +12,6 @@ export class AppComponent {
   imgPath = '../assets/img/SaveAZ.jpg';
 
   constructor(public auth: AuthService) {
-    auth.handleAuthentication();
+    auth.handleLoginCallback();
   }
 }

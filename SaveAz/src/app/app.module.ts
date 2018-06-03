@@ -20,10 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
 import { environment } from '../environments/environment';
-// export const firebaseConfig = environment.firebase;
-// import { DatabaseService } from './database.service';
-// import { AngularFirestoreModule } from 'angularfire2/firestore';
-// import { AngularFireModule } from 'angularfire2';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
