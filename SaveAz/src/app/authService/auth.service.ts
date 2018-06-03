@@ -4,7 +4,10 @@ import {filter, mergeMap} from 'rxjs/operators';
 import * as auth0 from 'auth0-js';
 import { ModuleWithProviders} from '@angular/compiler/src/core';
 import { AngularFireAuthModule} from 'angularfire2/auth';
+<<<<<<< HEAD
 import { AuthGuard } from './auth.guard';
+=======
+>>>>>>> 6aa3c12dee2c858d57137ec61488462d0d93cd0a
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
@@ -28,27 +31,28 @@ export class AuthService {
     scope: 'openid'
   });
 
-  constructor(public router: Router) {}
+  accessToken: string;
+  userProfile: any;
+  // Track authentication status
+  loggedIn: boolean;
+  loading: boolean;
+  // Track Firebase authentication status
+  loggedInFirebase: boolean;
+  // Subscribe to the Firebase token stream
+  firebaseSub: Subscription;
+  // Subscribe to Firebase renewal timer stream
+  refreshFirebaseSub: Subscription;
+
+  constructor(private router: Router,
+              private afAuth: AngularFireAuth,
+              private http: HttpClient
+  ) { }
 
   public login(): void {
     this.auth0.authorize();
   }
 
-  public handleAuthentication(): void {
-    this.auth0.parseHash((err, authResult) => {
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        window.location.hash = '';
-        this.setSession(authResult);
-        this.router.navigate(['/home']);
-      } else if (err) {
-        this.router.navigate(['/home']);
-        console.log(err);
-      }
-    });
-  }
-
   handleLoginCallback() {
-    this.loading = true;
     // When Auth0 hash parsed, get profile
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken) {
@@ -160,7 +164,7 @@ export class AuthService {
             const now = Date.now();
             // Use timer to track delay until expiration
             // to run the refresh at the proper time
-            return Observable.timer(Math.max(1, expires - now));
+            return timer(Math.max(1, expires - now));
           }
         )
       );

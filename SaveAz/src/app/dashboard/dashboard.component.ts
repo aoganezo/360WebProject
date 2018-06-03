@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   fullImagePath: string;
 
   constructor(private auth: AuthService) {
-    auth.handleAuthentication();
+    auth.handleLoginCallback();
   }
 
   ngOnInit() {
