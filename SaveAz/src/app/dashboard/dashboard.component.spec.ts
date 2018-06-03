@@ -30,8 +30,8 @@ class MockImageService extends ImageService {
 }
 
 class MockLikedItemService extends LikedItemServiceService {
-  constructor() {
-    super(null);
+  constructor() { 
+    super();
   }
 }
 
