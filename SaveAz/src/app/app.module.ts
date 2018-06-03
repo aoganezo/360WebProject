@@ -12,15 +12,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemsLikedComponent } from './items-liked/items-liked.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
 import { ProfileComponent } from './profile/profile.component';
 import { LikedItemServiceService } from './liked-item-service.service';
-import { HttpModule } from '@angular/http';
 import { AuthService } from './authService/auth.service';
+
+import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
 import { environment } from '../environments/environment';
-
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
