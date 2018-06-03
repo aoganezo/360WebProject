@@ -47,6 +47,7 @@ export class AuthService {
   public login(): void {
     this.auth0.authorize();
   }
+  //this
 
   handleLoginCallback() {
     // When Auth0 hash parsed, get profile
