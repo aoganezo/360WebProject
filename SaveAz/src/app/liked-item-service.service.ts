@@ -15,6 +15,7 @@ export class LikedItemServiceService {
   loading = true;
   error: boolean;
   likedItems: Item[] = [];
+  likedItemSet: Set<Item> = new Set<Item>();
 
 
   constructor(
@@ -47,8 +48,10 @@ export class LikedItemServiceService {
 
    getLikedItems(): Observable<Item[]> {
     console.log('Observable created');
-    this.likedItems = [];
     this.getDBResults();
+    console.log(this.likedItemSet);
+    console.log(this.likedItems);
+    this.likedItems = Array.from(this.likedItemSet);
     console.log(this.likedItems);
     return of(this.likedItems);
    }
@@ -68,7 +71,7 @@ export class LikedItemServiceService {
       });
     }).subscribe((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          this.likedItems.push(doc);
+          this.likedItemSet.add(doc);
         });
     });
    }

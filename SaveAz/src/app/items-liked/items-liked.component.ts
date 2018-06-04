@@ -4,6 +4,8 @@ import {GalleryComponent} from '../gallery/gallery.component';
 import {ImageService} from '../image/shared/image.service';
 import * as Chart from 'chart.js';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {forEach} from '@angular/router/src/utils/collection';
+import set = Reflect.set;
 
 @Component({
   selector: 'app-items-liked',
@@ -24,9 +26,14 @@ export class ItemsLikedComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('ngOnInit Liked Items');
     this.likedItems = [];
     this.itemService.getLikedItems()
       .subscribe(likedItems => this.likedItems = likedItems);
+    /*console.log(this.likedItems);
+    const setOfItems = new Set<Item>(this.likedItems);
+    console.log(setOfItems);
+    this.likedItems = Array.from(setOfItems);*/
     this.visibleImages = this.likedItems;
   }
 
@@ -45,6 +52,7 @@ export class ItemsLikedComponent implements OnInit {
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.addLikedItem(image);
+    this.likedItems = Array.from(new Set<Item>(this.likedItems));
     const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
     likeButton.hidden = true;
@@ -65,6 +73,7 @@ export class ItemsLikedComponent implements OnInit {
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.removeLikedItem(image);
+    this.likedItems = Array.from(new Set<Item>(this.likedItems));
     console.log('removed from service');
     const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
