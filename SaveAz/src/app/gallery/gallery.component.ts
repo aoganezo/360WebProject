@@ -44,13 +44,19 @@ export class GalleryComponent implements OnInit {
   }
 
   likeItem(id, image: Item) {
+    const index = this.likedItems.indexOf(image);
+    if (index === -1) {
+      this.likedItems.push(image);
+    }
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.addLikedItem(image);
-    /* const likeButton = document.getElementById(likeId);
+    const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
+    likeButton.hidden = true;
     likeButton.style.display = 'none';
-    unlikeButton.style.display = 'inline'; */
+    unlikeButton.hidden = false;
+    unlikeButton.style.display = 'true';
   }
 
   unlikeItem(id, image: Item) {
@@ -65,11 +71,13 @@ export class GalleryComponent implements OnInit {
     const unlikeId = 'unlike'.concat(id);
     this.itemService.removeLikedItem(image);
     console.log('removed from service');
-    /* const likeButton = document.getElementById(likeId);
+    const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
+    likeButton.hidden = false;
     likeButton.style.display = 'inline';
+    unlikeButton.hidden = true;
     unlikeButton.style.display = 'none';
-    console.log('unlike completed'); */
+    console.log('unlike completed');
   }
 
   isLiked(image: Item): boolean {

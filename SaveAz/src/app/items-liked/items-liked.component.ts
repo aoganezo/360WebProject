@@ -36,33 +36,54 @@ export class ItemsLikedComponent implements OnInit {
   }
 
   likeItem(id, image: Item) {
+    const index = this.likedItems.indexOf(image);
+    if (index === -1) {
+      this.likedItems.push(image);
+    }
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.addLikedItem(image);
-    /* const likeButton = document.getElementById(likeId);
+    const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
+    likeButton.hidden = true;
     likeButton.style.display = 'none';
-    unlikeButton.style.display = 'inline'; */
+    unlikeButton.hidden = false;
+    unlikeButton.style.display = 'true';
   }
 
   unlikeItem(id, image: Item) {
+    const index = this.likedItems.indexOf(image);
+    if (index > -1) {
+      this.likedItems.splice(index, 1);
+      console.log(this.likedItems);
+    }
+
+    console.log(id);
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.removeLikedItem(image);
-    /* const likeButton = document.getElementById(likeId);
+    console.log('removed from service');
+    const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
+    likeButton.hidden = false;
     likeButton.style.display = 'inline';
-    unlikeButton.style.display = 'none'; */
+    unlikeButton.hidden = true;
+    unlikeButton.style.display = 'none';
+    console.log('unlike completed');
   }
 
   isLiked(image: Item): boolean {
-    let i: number;
-    for (i = 0; i < this.likedItems.length; i++) {
+    // let i: number;
+    console.log(this.likedItems);
+    return this.likedItems.includes(image);
+
+    /* for ( i = 0 ; i < this.likedItems.length ; i++) {
+      // console.log(likedItems[i].name + ': ' + image.name + ': ' + (likedItems[i].name === image.name));
       if (this.likedItems[i].name === image.name) {
         return true;
       }
     }
-    return false;
+    return false; */
   }
 
   generateChart() {
