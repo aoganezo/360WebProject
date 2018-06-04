@@ -50,7 +50,16 @@ describe('SearchbarComponent', () => {
     // expect(component).toBeTruthy();
     //expect(true).toBeTruthy();
   //})));
-  it('should create', () => {
+  it('should do basic boolean test', () => {
     expect(true).toEqual(true);
   });
+
+  it('should search', () => {
+    expect(component.search).toBeTruthy();
+  });
+
+  it('should have keydownfunction', () => {
+    expect(component.keyDownFunction).toBeTruthy();
+  });
+  
 });

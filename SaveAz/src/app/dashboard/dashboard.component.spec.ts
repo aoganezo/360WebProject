@@ -50,7 +50,7 @@ describe('DashboardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be true from boolean assignment', () => {
     // expect(component).toBeTruthy();
     expect(true).toEqual(true);
   });
