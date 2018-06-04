@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 class MockAuthService extends AuthService {
   constructor() {
-    super(null);
+    super(null, null, null);
   }
 }
 
@@ -20,7 +20,7 @@ class MockImageService extends ImageService {
 
 class MockLikedItemService extends LikedItemServiceService {
   constructor() {
-    super();
+    super(null, null);
   }
 }
 

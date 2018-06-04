@@ -11,16 +11,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 class MockAuthService extends AuthService {
   constructor() {
-    super(null,null,null);
+    super(null, null, null);
   }
-  // testContacts: Array<Contact> = [
-  //   new Contact('test1 mock', 12345, 10000),
-  //   new Contact('test2 mock', 23456, 20000)
-  // ];
-  //
-  // public getContacts(): Observable<Array<Contact>> {
-  //   return Observable.of(this.testContacts);
-  // }
 }
 
 class MockImageService extends ImageService {
@@ -31,7 +23,7 @@ class MockImageService extends ImageService {
 
 class MockLikedItemService extends LikedItemServiceService {
   constructor() {
-    // super(null);
+    super(null, null);
   }
 }
 

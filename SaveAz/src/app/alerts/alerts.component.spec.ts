@@ -3,14 +3,13 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AlertsComponent } from './alerts.component';
 import {ImageService} from '../image/shared/image.service';
 import { AuthService } from '../authService/auth.service';
-import { ImageService } from '../image/shared/image.service';
 import { LikedItemServiceService } from '../liked-item-service.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 class MockAuthService extends AuthService {
   constructor() {
-    super(null);
+    super(null, null, null);
   }
 }
 
@@ -22,7 +21,7 @@ class MockImageService extends ImageService {
 
 class MockLikedItemService extends LikedItemServiceService {
   constructor() {
-    super();
+    super(null, null);
   }
 }
 
