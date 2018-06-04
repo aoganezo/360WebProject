@@ -17,7 +17,7 @@ export class GalleryComponent implements OnInit {
   productNames: any[];
   allRatings: number[];
   allPrices: number[];
-  likedItems: Item[] = [];
+  likedItems: Set<Item> = new Set<Item>();
 
 
 
@@ -26,11 +26,10 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit() {
+    // this.likedItems = [];
     this.getItems();
     this.itemService.getLikedItems()
-      .subscribe(res => {
-        this.likedItems = res;
-      });
+      .subscribe(res => this.likedItems = res);
   }
 
   getItems() {
@@ -44,13 +43,15 @@ export class GalleryComponent implements OnInit {
   }
 
   likeItem(id, image: Item) {
-    const index = this.likedItems.indexOf(image);
-    if (index === -1) {
-      this.likedItems.push(image);
+    console.log(this.likedItems);
+    const index = this.likedItems.has(image);
+    if (!index) {
+      this.likedItems.add(image);
     }
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.addLikedItem(image);
+    console.log(image);
     const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
     likeButton.hidden = true;
@@ -60,16 +61,17 @@ export class GalleryComponent implements OnInit {
   }
 
   unlikeItem(id, image: Item) {
-    const index = this.likedItems.indexOf(image);
-    if (index > -1) {
-      this.likedItems.splice(index, 1);
+    console.log(this.likedItems);
+    const index = this.likedItems.has(image);
+    if (index) {
+      this.likedItems.delete(image);
       console.log(this.likedItems);
+      this.itemService.removeLikedItem(image);
     }
 
     console.log(id);
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
-    this.itemService.removeLikedItem(image);
     console.log('removed from service');
     const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
@@ -82,8 +84,8 @@ export class GalleryComponent implements OnInit {
 
   isLiked(image: Item): boolean {
     // let i: number;
-    console.log(this.likedItems);
-    return this.likedItems.includes(image);
+    // console.log(this.likedItems);
+    return this.likedItems.has(image);
 
     /* for ( i = 0 ; i < this.likedItems.length ; i++) {
       // console.log(likedItems[i].name + ': ' + image.name + ': ' + (likedItems[i].name === image.name));

@@ -11,22 +11,27 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./items-liked.component.css']
 })
 export class ItemsLikedComponent implements OnInit {
-  likedItems: Item[];
-  allPrices: number[];
-  allRatings: number[];
-  chart: Chart;
-  imageService: ImageService;
-  productNames: any[];
   visibleImages: Item[];
+  imageService: ImageService;
+  chart: Chart;
+  productNames: any[];
+  allRatings: number[];
+  allPrices: number[];
+  likedItems: Set<Item>;
 
   constructor(private iService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {
     this.imageService = iService;
   }
 
   ngOnInit() {
+    this.likedItems = new Set<Item>();
+    console.log('liked items: ' + this.itemService.getLikedItems());
     this.itemService.getLikedItems()
-      .subscribe(likedItems => this.likedItems = likedItems);
-    this.visibleImages = this.likedItems;
+      .subscribe(itemservicelikedItems => {
+        console.log(itemservicelikedItems.size);
+        this.likedItems = itemservicelikedItems;
+      });
+    this.visibleImages = Array.from(this.likedItems);
   }
 
   open(content) {
@@ -36,10 +41,11 @@ export class ItemsLikedComponent implements OnInit {
   }
 
   likeItem(id, image: Item) {
-    const index = this.likedItems.indexOf(image);
+    console.log(this.likedItems);
+    /*const index = this.likedItems.indexOf(image);
     if (index === -1) {
       this.likedItems.push(image);
-    }
+    }*/
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.addLikedItem(image);
@@ -52,11 +58,12 @@ export class ItemsLikedComponent implements OnInit {
   }
 
   unlikeItem(id, image: Item) {
-    const index = this.likedItems.indexOf(image);
+    console.log(this.likedItems);
+    /*const index = this.likedItems.indexOf(image);
     if (index > -1) {
       this.likedItems.splice(index, 1);
       console.log(this.likedItems);
-    }
+    }*/
 
     console.log(id);
     const likeId = 'like'.concat(id);
@@ -73,9 +80,8 @@ export class ItemsLikedComponent implements OnInit {
   }
 
   isLiked(image: Item): boolean {
-    // let i: number;
-    console.log(this.likedItems);
-    return this.likedItems.includes(image);
+    // let i: number
+    return this.likedItems.has(image);
 
     /* for ( i = 0 ; i < this.likedItems.length ; i++) {
       // console.log(likedItems[i].name + ': ' + image.name + ': ' + (likedItems[i].name === image.name));
