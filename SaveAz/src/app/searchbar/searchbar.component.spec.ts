@@ -5,6 +5,7 @@ import { ImageService } from '../image/shared/image.service';
 import { AuthService } from '../authService/auth.service';
 import { LikedItemServiceService } from '../liked-item-service.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { By } from '@angular/platform-browser';
 
 class MockAuthService extends AuthService {
   constructor() {
@@ -57,6 +58,15 @@ describe('SearchbarComponent', () => {
   it('should search', () => {
     expect(component.search).toBeTruthy();
   });
+
+  it('should call on search button', async(() => {
+    fixture.detectChanges();
+    spyOn(component, 'searchSubject');
+    const testt = fixture.debugElement.query(By.css('button')).nativeElement;
+    testt.click();
+    expect(component.search).toHaveBeenCalled
+
+  }));
 
   it('should have keydownfunction', () => {
     expect(component.keyDownFunction).toBeTruthy();
