@@ -10,8 +10,8 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './items-liked.component.html',
   styleUrls: ['./items-liked.component.css']
 })
-export class ItemsLikedComponent implements OnInit{
-  likedItems = [];
+export class ItemsLikedComponent implements OnInit {
+  likedItems: Item[];
   allPrices: number[];
   allRatings: number[];
   chart: Chart;
@@ -39,31 +39,26 @@ export class ItemsLikedComponent implements OnInit{
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.addLikedItem(image);
-    const likeButton = document.getElementById(likeId);
+    /* const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
     likeButton.style.display = 'none';
-    unlikeButton.style.display = 'inline';
+    unlikeButton.style.display = 'inline'; */
   }
 
   unlikeItem(id, image: Item) {
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.removeLikedItem(image);
-    const likeButton = document.getElementById(likeId);
+    /* const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
     likeButton.style.display = 'inline';
-    unlikeButton.style.display = 'none';
+    unlikeButton.style.display = 'none'; */
   }
 
   isLiked(image: Item): boolean {
-    let likedItems: Item[] = [];
-    this.itemService.getLikedItems()
-      .subscribe(res => {
-        likedItems = res;
-      });
     let i: number;
-    for (i = 0; i < likedItems.length; i++) {
-      if (likedItems[i].name === image.name) {
+    for (i = 0; i < this.likedItems.length; i++) {
+      if (this.likedItems[i].name === image.name) {
         return true;
       }
     }
@@ -73,9 +68,9 @@ export class ItemsLikedComponent implements OnInit{
   generateChart() {
     this.imageService.getImages()
       .subscribe(res => {
-        this.productNames = this.visibleImages.map(res => res.name);
-        this.allRatings = res.map(res => Number(res.rating));
-        this.allPrices = res.map(res => Number(res.price));
+        this.productNames = this.visibleImages.map(res1 => res1.name);
+        this.allRatings = res.map(res1 => Number(res1.rating));
+        this.allPrices = res.map(res1 => Number(res1.price));
         this.loadPriceChart();
       });
   }

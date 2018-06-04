@@ -6,8 +6,12 @@
     <li *ngFor = "let image of visibleImages"  >
       <div class="imageCaption" *ngIf="image.category !== 'testCategory'">
         <div id="likeButtons">
-          <button id = "like{{image.id}}" class ="like" (click)="likeItem(image.id,image)" [hidden]="isLiked(image)" style="background-image: url('../../assets/img/blankcircle.png')"></button>
-          <button id = "unlike{{image.id}}" class ="unlike" (click)="unlikeItem(image.id,image)" [hidden]="!isLiked(image)" style="background-image: url('../../assets/img/checkmark.png')"></button>
+          <div *ngIf="!isLiked(image)">
+            <button id = "like{{image.id}}" class ="like" (click)="likeItem(image.id,image)" style="background-image: url('../../assets/img/blankcircle.png')"></button>
+          </div>
+          <div *ngIf="isLiked(image)">
+            <button id = "unlike{{image.id}}" class ="unlike" (click)="unlikeItem(image.id,image)" style="background-image: url('../../assets/img/checkmark.png')"></button>
+          </div>
         </div>
         <a (click)="open(content)">
           <figure>

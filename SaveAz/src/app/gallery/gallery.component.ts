@@ -17,6 +17,8 @@ export class GalleryComponent implements OnInit {
   productNames: any[];
   allRatings: number[];
   allPrices: number[];
+  likedItems: Item[] = [];
+
 
 
   constructor(private iService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {
@@ -24,7 +26,11 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.getItems();
+    this.getItems();
+    this.itemService.getLikedItems()
+      .subscribe(res => {
+        this.likedItems = res;
+      });
   }
 
   getItems() {
@@ -41,50 +47,55 @@ export class GalleryComponent implements OnInit {
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.addLikedItem(image);
-    const likeButton = document.getElementById(likeId);
+    /* const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
     likeButton.style.display = 'none';
-    unlikeButton.style.display = 'inline';
+    unlikeButton.style.display = 'inline'; */
   }
 
   unlikeItem(id, image: Item) {
+    const index = this.likedItems.indexOf(image);
+    if (index > -1) {
+      this.likedItems.splice(index, 1);
+      console.log(this.likedItems);
+    }
+
     console.log(id);
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.removeLikedItem(image);
     console.log('removed from service');
-    const likeButton = document.getElementById(likeId);
+    /* const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
     likeButton.style.display = 'inline';
     unlikeButton.style.display = 'none';
-    console.log('unlike completed');
+    console.log('unlike completed'); */
   }
 
   isLiked(image: Item): boolean {
-    let likedItems: Item[] = [];
-    this.itemService.getLikedItems()
-      .subscribe(res => {
-        likedItems = res;
-      });
-    let i: number;
-    for ( i = 0 ; i < likedItems.length ; i++) {
+    // let i: number;
+    console.log(this.likedItems);
+    return this.likedItems.includes(image);
+
+    /* for ( i = 0 ; i < this.likedItems.length ; i++) {
       // console.log(likedItems[i].name + ': ' + image.name + ': ' + (likedItems[i].name === image.name));
-      if (likedItems[i].name === image.name) {
+      if (this.likedItems[i].name === image.name) {
         return true;
       }
     }
-    return false;
+    return false; */
   }
 
   generateChart() {
     this.imageService.getImages()
       .subscribe(res => {
-        this.productNames = this.visibleImages.map(res => res.name);
-        this.allRatings = res.map(res => Number(res.rating));
-        this.allPrices = res.map(res => Number(res.price));
+        this.productNames = this.visibleImages.map(res1 => res1.name);
+        this.allRatings = res.map(res1 => Number(res1.rating));
+        this.allPrices = res.map(res1 => Number(res1.price));
         this.loadPriceChart();
       });
   }
+
   loadPriceChart() {
     if (this.chart) {
       this.chart.destroy();
