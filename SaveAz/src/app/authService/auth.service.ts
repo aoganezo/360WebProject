@@ -23,7 +23,8 @@ export class AuthService {
     domain: 'saveaz.auth0.com',
     responseType: 'token id_token',
     audience: 'https://saveaz.auth0.com/userinfo',
-    redirectUri: 'https://saveaz-5010f.firebaseapp.com/dashboard',
+    // redirectUri: 'https://saveaz-5010f.firebaseapp.com/dashboard',
+    redirectUri: 'http://localhost:4200/dashboard',
     scope: 'openid'
   });
 
@@ -47,7 +48,6 @@ export class AuthService {
   public login(): void {
     this.auth0.authorize();
   }
-  //this
 
   handleLoginCallback() {
     // When Auth0 hash parsed, get profile
