@@ -17,21 +17,17 @@ export class ItemsLikedComponent implements OnInit {
   productNames: any[];
   allRatings: number[];
   allPrices: number[];
-  likedItems: Set<Item>;
+  likedItems: Item[] = [];
 
   constructor(private iService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {
     this.imageService = iService;
   }
 
   ngOnInit() {
-    this.likedItems = new Set<Item>();
-    console.log('liked items: ' + this.itemService.getLikedItems());
+    this.likedItems = [];
     this.itemService.getLikedItems()
-      .subscribe(itemservicelikedItems => {
-        console.log(itemservicelikedItems.size);
-        this.likedItems = itemservicelikedItems;
-      });
-    this.visibleImages = Array.from(this.likedItems);
+      .subscribe(likedItems => this.likedItems = likedItems);
+    this.visibleImages = this.likedItems;
   }
 
   open(content) {
@@ -80,16 +76,15 @@ export class ItemsLikedComponent implements OnInit {
   }
 
   isLiked(image: Item): boolean {
-    // let i: number
-    return this.likedItems.has(image);
-
-    /* for ( i = 0 ; i < this.likedItems.length ; i++) {
-      // console.log(likedItems[i].name + ': ' + image.name + ': ' + (likedItems[i].name === image.name));
-      if (this.likedItems[i].name === image.name) {
-        return true;
+    const setOfItems = new Set<Item>(this.likedItems);
+    // console.log('>' + image + '<' + ': ' + (this.likedItems.includes(image)));
+    let liked = false;
+    setOfItems.forEach(function(item) {
+      if (item.id === image.id) {
+        liked = true;
       }
-    }
-    return false; */
+    });
+    return liked;
   }
 
   generateChart() {

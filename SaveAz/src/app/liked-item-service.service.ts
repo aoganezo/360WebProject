@@ -14,7 +14,7 @@ export class LikedItemServiceService {
 
   loading = true;
   error: boolean;
-  likedItems: Set<Item>;
+  likedItems: Item[] = [];
 
 
   constructor(
@@ -45,10 +45,11 @@ export class LikedItemServiceService {
     return Observable.throw('An error occurred while retrieving comments.');
   }
 
-   getLikedItems(): Observable<Set<Item>> {
+   getLikedItems(): Observable<Item[]> {
     console.log('Observable created');
-    this.likedItems = new Set<Item>();
+    this.likedItems = [];
     this.getDBResults();
+    console.log(this.likedItems);
     return of(this.likedItems);
    }
 
@@ -58,16 +59,16 @@ export class LikedItemServiceService {
     this.db.collection(temp).snapshotChanges().map(actions => {
       return actions.map(a => {
         const data = <Item> a.payload.doc.data();
-        console.log(data);
+        // console.log(data);
         const id = a.payload.doc.id;
-        console.log(id);
-        this.likedItems.add(data);
+        // console.log(id);
+        // this.likedItems.push(data);
 
         return { id, ...data };
       });
     }).subscribe((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            // console.log(doc);
+          this.likedItems.push(doc);
         });
     });
    }
@@ -81,10 +82,10 @@ export class LikedItemServiceService {
   }
 
   removeLikedItem(image: Item): void {
-    const index = this.likedItems.has(image);
+    const index = this.likedItems.indexOf(image);
     const temp = this.auth.userProfile.sub.toString();
-    if (index) {
-      this.likedItems.delete(image);
+    if (index > -1) {
+      this.likedItems.splice(index, 1);
       console.log(this.likedItems);
     }
     this.db.collection(temp).doc(image.id.toString()).delete();
