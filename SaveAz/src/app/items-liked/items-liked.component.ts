@@ -59,6 +59,7 @@ export class ItemsLikedComponent implements OnInit {
     likeButton.style.display = 'none';
     unlikeButton.hidden = false;
     unlikeButton.style.display = 'true';
+    this.itemService.getLikedItems();
   }
 
   unlikeItem(id, image: Item) {
@@ -82,6 +83,7 @@ export class ItemsLikedComponent implements OnInit {
     unlikeButton.hidden = true;
     unlikeButton.style.display = 'none';
     console.log('unlike completed');
+    this.itemService.getLikedItems();
   }
 
   isLiked(image: Item): boolean {
