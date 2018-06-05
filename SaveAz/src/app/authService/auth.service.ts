@@ -17,7 +17,6 @@ import { timer } from 'rxjs/observable/timer';
 
 @Injectable()
 export class AuthService {
-
   auth0 = new auth0.WebAuth({
     clientID: 'vm9VqvH2eWhvJNCFE0gMlqegdJVk0vTY',
     domain: 'saveaz.auth0.com',

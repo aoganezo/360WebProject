@@ -28,7 +28,7 @@ class MockImageService extends ImageService {
     )];
 }
 
-describe('ImageService', () => {
+fdescribe('ImageService', () => {
   let imgService: ImageService;
 
   beforeEach(() => {
