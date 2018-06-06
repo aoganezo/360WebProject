@@ -25,7 +25,7 @@ class MockImageService extends ImageService {
 }
 
 
-fdescribe('LikedItemServiceService', () => {
+describe('LikedItemServiceService', () => {
   let component: LikedItemServiceService;
   let fixture: ComponentFixture<LikedItemServiceService>;
 
@@ -52,7 +52,7 @@ fdescribe('LikedItemServiceService', () => {
   //}));
 
   it('should be created', () => {
-   expect(component.addLikedItem).toBeTruthy();
+   expect(component).toBeTruthy();
   });
 
 });
