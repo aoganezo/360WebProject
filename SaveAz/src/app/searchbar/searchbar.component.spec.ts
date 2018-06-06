@@ -25,7 +25,7 @@ class MockLikedItemService extends LikedItemServiceService {
   }
 }
 
-describe('SearchbarComponent', () => {
+fdescribe('SearchbarComponent', () => {
   let component: SearchbarComponent;
   let fixture: ComponentFixture<SearchbarComponent>;
 
@@ -65,7 +65,7 @@ describe('SearchbarComponent', () => {
     const testt = fixture.debugElement.query(By.css('button')).nativeElement;
     testt.click();
     //expect(component.search).toHaveBeenCalled;
-    expect(component.keyDownFunction).toBeTruthy();
+    expect(component.search).toBeTruthy();
 
   }));
 
