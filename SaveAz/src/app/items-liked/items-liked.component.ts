@@ -40,6 +40,8 @@ export class ItemsLikedComponent implements OnInit {
     this.visibleImages = this.likedItems;
   }
 
+  ngDoCheck
+
   open(content) {
     this.modalService.open(content).result.then((result) => {
     });
@@ -62,7 +64,11 @@ export class ItemsLikedComponent implements OnInit {
     likeButton.style.display = 'none';
     unlikeButton.hidden = false;
     unlikeButton.style.display = 'true';
-    this.itemService.getLikedItems();
+    this.itemService.getLikedItems()
+      .subscribe(likedItems => {
+        this.likedItems = [];
+        this.likedItems = likedItems;
+      });
   }
 
   unlikeItem(id, image: Item) {
@@ -86,7 +92,11 @@ export class ItemsLikedComponent implements OnInit {
     unlikeButton.hidden = true;
     unlikeButton.style.display = 'none';
     console.log('unlike completed');
-    this.itemService.getLikedItems();
+    this.itemService.getLikedItems()
+      .subscribe(likedItems => {
+        this.likedItems = [];
+        this.likedItems = likedItems;
+      });
   }
 
   isLiked(image: Item): boolean {

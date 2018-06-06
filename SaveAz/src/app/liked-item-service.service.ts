@@ -48,11 +48,11 @@ export class LikedItemServiceService {
 
    getLikedItems(): Observable<Item[]> {
     console.log('Observable created');
-    this.likedItems = [];
     return of(this.getDBResults());
    }
 
    getDBResults(): Item[] {
+     this.likedItems = [];
     console.log('getDBResults called');
     const temp = this.auth.userProfile.sub.toString();
     this.db.collection(temp).snapshotChanges().map(actions => {
@@ -79,6 +79,7 @@ export class LikedItemServiceService {
     console.log('sub: ' + temp);
     this.db.collection(temp).doc(image.id.toString()).set(image);
     // console.log(this.likedItems);
+    this.getDBResults();
   }
 
   removeLikedItem(image: Item): void {
@@ -89,5 +90,6 @@ export class LikedItemServiceService {
       console.log(this.likedItems);
     }
     this.db.collection(temp).doc(image.id.toString()).delete();
+    this.getDBResults();
   }
 }
