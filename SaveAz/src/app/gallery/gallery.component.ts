@@ -3,6 +3,7 @@ import { ImageService } from '../image/shared/image.service';
 import { LikedItemServiceService } from '../liked-item-service.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {Chart} from 'chart.js';
+import { AuthService } from '../authService/auth.service';
 
 @Component({
     selector: 'app-gallery',
@@ -21,7 +22,9 @@ export class GalleryComponent implements OnInit {
 
 
 
-  constructor(private iService: ImageService, public itemService: LikedItemServiceService, private modalService: NgbModal) {
+  constructor(private iService: ImageService, public itemService: LikedItemServiceService,
+              private modalService: NgbModal, public authService: AuthService) {
+
     this.imageService = iService;
   }
 
@@ -93,6 +96,10 @@ export class GalleryComponent implements OnInit {
       }
     });
     return liked;
+  }
+
+  isAuthenticated(): boolean {
+    return this.authService.isAuthenticated();
   }
 
   generateChart() {
