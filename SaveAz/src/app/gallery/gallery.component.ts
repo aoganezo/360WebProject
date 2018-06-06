@@ -85,7 +85,6 @@ export class GalleryComponent implements OnInit {
     unlikeButton.style.display = 'none';
     console.log('unlike completed');
   }
-
   isLiked(image: Item): boolean {
     const setOfItems = new Set<Item>(this.likedItems);
     // console.log('>' + image + '<' + ': ' + (this.likedItems.includes(image)));

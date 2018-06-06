@@ -51,8 +51,14 @@ describe('LikedItemServiceService', () => {
   //  expect(service).toBeTruthy();
   //}));
 
+<<<<<<< HEAD
   it('should be created', () => {
    expect(component).toBeTruthy();
   });
+=======
+  //it('should be created', () => {
+   //expect(component.addLikedItem).toBeTruthy();
+  //});
+>>>>>>> ee331b91aa2fedaebb924b7287c1ab38bf698aad
 
 });

@@ -27,10 +27,9 @@ export class ItemsLikedComponent implements OnInit {
 
   ngOnInit() {
     console.log('ngOnInit Liked Items');
-    this.likedItems = [];
     this.itemService.getLikedItems()
       .subscribe(likedItems => {
-        this.likedItems = [];
+        // this.likedItems = [];
         this.likedItems = likedItems;
       });
     /*console.log(this.likedItems);
@@ -55,14 +54,16 @@ export class ItemsLikedComponent implements OnInit {
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.addLikedItem(image);
-    this.likedItems = Array.from(new Set<Item>(this.likedItems));
     const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
     likeButton.hidden = true;
     likeButton.style.display = 'none';
     unlikeButton.hidden = false;
     unlikeButton.style.display = 'true';
-    this.itemService.getLikedItems();
+    this.itemService.getLikedItems()
+      .subscribe(likedItems => {
+        this.likedItems = likedItems;
+      });
   }
 
   unlikeItem(id, image: Item) {
@@ -77,7 +78,6 @@ export class ItemsLikedComponent implements OnInit {
     const likeId = 'like'.concat(id);
     const unlikeId = 'unlike'.concat(id);
     this.itemService.removeLikedItem(image);
-    this.likedItems = Array.from(new Set<Item>(this.likedItems));
     console.log('removed from service');
     const likeButton = document.getElementById(likeId);
     const unlikeButton = document.getElementById(unlikeId);
@@ -86,7 +86,10 @@ export class ItemsLikedComponent implements OnInit {
     unlikeButton.hidden = true;
     unlikeButton.style.display = 'none';
     console.log('unlike completed');
-    this.itemService.getLikedItems();
+    this.itemService.getLikedItems()
+      .subscribe(likedItems => {
+        this.likedItems = likedItems;
+      });
   }
 
   isLiked(image: Item): boolean {

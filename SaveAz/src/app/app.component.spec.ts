@@ -10,7 +10,7 @@ class MockAuthService extends AuthService {
   }
 }
 
-describe('AppComponent', () => {
+fdescribe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
