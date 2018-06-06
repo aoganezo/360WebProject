@@ -83,13 +83,13 @@ export class LikedItemServiceService {
   }
 
   removeLikedItem(image: Item): void {
-    const index = this.likedItems.indexOf(image);
     const temp = this.auth.userProfile.sub.toString();
-    if (index > -1) {
+    this.db.collection(temp).doc(image.id.toString()).delete();
+    const index = this.likedItems.indexOf(image);
+    if (index !== -1) {
       this.likedItems.splice(index, 1);
       console.log(this.likedItems);
     }
-    this.db.collection(temp).doc(image.id.toString()).delete();
     this.getDBResults();
   }
 }
