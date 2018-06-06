@@ -48,6 +48,7 @@ export class LikedItemServiceService {
 
    getLikedItems(): Observable<Item[]> {
     console.log('Observable created');
+    this.likedItems = [];
     return of(this.getDBResults());
    }
 

@@ -29,7 +29,10 @@ export class ItemsLikedComponent implements OnInit {
     console.log('ngOnInit Liked Items');
     this.likedItems = [];
     this.itemService.getLikedItems()
-      .subscribe(likedItems => this.likedItems = likedItems);
+      .subscribe(likedItems => {
+        this.likedItems = [];
+        this.likedItems = likedItems;
+      });
     /*console.log(this.likedItems);
     const setOfItems = new Set<Item>(this.likedItems);
     console.log(setOfItems);

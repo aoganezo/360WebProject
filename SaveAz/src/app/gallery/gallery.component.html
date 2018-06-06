@@ -12,7 +12,7 @@
 
         <li *ngFor = "let image of visibleImages"  >
           <div class="imageCaption" *ngIf="image.category !== 'testCategory'">
-            <div id="likeButtons">
+            <div id="likeButtons" *ngIf="isAuthenticated()">
               <!-- *ngIf="!isLiked(image) ;else otherLike"> -->
               <div [hidden] = "isLiked(image)"> 
                   <button id = "like{{image.id}}" class ="like" (click)="likeItem(image.id,image)" style="float: left; background-image: url('../../assets/img/blankcircle.png')"></button>
